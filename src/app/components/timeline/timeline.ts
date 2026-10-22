@@ -85,7 +85,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
         </div>
 
         <div class="tl-note card" appReveal>
-          <div class="card-icon warn">💡</div>
+          <div class="card-icon warn">✦</div>
           <div>
             <h3>¿Por qué se descubrió justo entonces?</h3>
             <p>

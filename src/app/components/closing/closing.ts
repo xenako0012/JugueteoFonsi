@@ -15,7 +15,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 
         <div class="grid grid-3">
           <article class="card concl-card" appReveal data-delay="1">
-            <div class="card-icon danger">🧯</div>
+            <div class="card-icon danger">⚠</div>
             <h3>El motor también falla</h3>
             <p>
               No basta con programar seguro: hay que mantener actualizado el <strong>motor que ejecuta el código</strong>.
@@ -23,7 +23,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </p>
           </article>
           <article class="card concl-card" appReveal data-delay="2">
-            <div class="card-icon ok">⚡</div>
+            <div class="card-icon ok">➤</div>
             <h3>La velocidad es la defensa</h3>
             <p>
               Quien actualizó en horas quedó protegido; quien esperó se enfrentó a explotación masiva. Inventario,
@@ -31,7 +31,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </p>
           </article>
           <article class="card concl-card" appReveal data-delay="3">
-            <div class="card-icon info">🔍</div>
+            <div class="card-icon info">◉</div>
             <h3>Verificar es tan importante como parchear</h3>
             <p>
               Comprobar versiones, revisar logs, dejar evidencia y confirmar que el backend Laravel (y con él el

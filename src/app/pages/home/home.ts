@@ -75,7 +75,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
       <div class="container">
         <div class="home-cta-box" appReveal>
           <div>
-            <span class="sticker">para entregar 📚</span>
+            <span class="sticker">para entregar ✎</span>
             <h2>¿Tu stack es Angular + Laravel?</h2>
             <p>
               La checklist del caso práctico recorre los 8 pasos para comprobar que el backend está protegido,

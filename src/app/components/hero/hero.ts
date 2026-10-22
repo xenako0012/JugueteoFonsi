@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
               <span class="dot"></span>
               Práctica de seguridad · Octubre de 2026
             </span>
-            <span class="sticker">se admiten parches urgentes 🩹</span>
+            <span class="sticker">se admiten parches urgentes ✚</span>
           </div>
 
           <h1>

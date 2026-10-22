@@ -43,7 +43,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 
         <div class="grid grid-2 det-next">
           <div class="card det-plan" appReveal data-delay="1">
-            <div class="card-icon ok">🧭</div>
+            <div class="card-icon ok">✓</div>
             <h3>Si sospechas que te han explotado</h3>
             <ul class="tick-list">
               <li><span class="tick ok">1</span><span><strong>Aísla</strong> el servidor afectado, pero <strong>no borres nada</strong>: los logs y la memoria son evidencia.</span></li>
@@ -54,7 +54,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
           </div>
 
           <div class="card det-window" appReveal data-delay="2">
-            <div class="card-icon warn">📅</div>
+            <div class="card-icon warn">⚠</div>
             <h3>¿Hasta dónde mirar hacia atrás?</h3>
             <p>
               Como mínimo hasta el <strong>17 de octubre de 2026</strong> (primer intento observado públicamente).

@@ -59,8 +59,18 @@
 }
 
 .home-card-icon {
-  font-size: 1.7rem;
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
   line-height: 1;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--primary-softer);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .home-card h4 {

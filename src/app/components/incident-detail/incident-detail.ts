@@ -94,7 +94,7 @@ interface CveTab {
         <!-- conceptos -->
         <div class="grid grid-3 concepts">
           <article class="card" appReveal data-delay="1">
-            <div class="card-icon danger">💥</div>
+            <div class="card-icon danger">⚠</div>
             <h3>¿Qué es una RCE?</h3>
             <p>
               <strong>Remote Code Execution</strong>: la peor pesadilla de un servidor. El atacante logra que el
@@ -104,7 +104,7 @@ interface CveTab {
             </p>
           </article>
           <article class="card" appReveal data-delay="2">
-            <div class="card-icon warn">🧠</div>
+            <div class="card-icon warn">∞</div>
             <h3>¿Qué es un «use-after-free»?</h3>
             <p>
               Imagina una habitación del hotel: un huésped se va (PHP libera la memoria), pero su llave sigue
@@ -114,7 +114,7 @@ interface CveTab {
             </p>
           </article>
           <article class="card" appReveal data-delay="3">
-            <div class="card-icon info">🔓</div>
+            <div class="card-icon info">⊘</div>
             <h3>«Sin autenticación», en serio</h3>
             <p>
               No hace falta cuenta de usuario, ni formulario, ni siquiera una vulnerabilidad en la aplicación. Basta
@@ -146,11 +146,11 @@ export class IncidentDetail {
   protected readonly activeTab = signal('cve1');
 
   protected readonly attackSteps = [
-    { icon: '📮', label: 'Petición manipulada', detail: 'HTTP multipart diseñada' },
-    { icon: '🧩', label: 'Estado corrupto', detail: 'memoria a medio liberar' },
-    { icon: '🔓', label: 'use-after-free', detail: 'el motor lo reutiliza' },
-    { icon: '💻', label: 'Código arbitrario', detail: 'comandos del atacante' },
-    { icon: '🐚', label: 'Shell remota', detail: 'control del servidor' },
+    { icon: '01', label: 'Petición manipulada', detail: 'HTTP multipart diseñada' },
+    { icon: '02', label: 'Estado corrupto', detail: 'memoria a medio liberar' },
+    { icon: '03', label: 'use-after-free', detail: 'el motor lo reutiliza' },
+    { icon: '04', label: 'Código arbitrario', detail: 'comandos del atacante' },
+    { icon: '05', label: 'Shell remota', detail: 'control del servidor' },
   ];
 
   protected readonly tabs: CveTab[] = [
