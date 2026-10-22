@@ -1,0 +1,15 @@
+.v-summary {
+  margin-bottom: 36px;
+}
+.v-card-danger { border-top: 4px solid var(--danger); }
+.v-card-ok { border-top: 4px solid var(--ok); }
+.v-card-warn { border-top: 4px solid var(--warn); }
+
+.v-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+}
+
+.v-extra {
+  margin-top: 36px;
+}

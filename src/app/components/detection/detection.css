@@ -1,0 +1,15 @@
+.det-terminal {
+  margin: 36px 0;
+}
+.det-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.det-next {
+  align-items: stretch;
+}
+.det-plan, .det-window {
+  height: 100%;
+}

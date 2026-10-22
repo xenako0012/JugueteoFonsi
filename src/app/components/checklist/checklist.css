@@ -1,0 +1,121 @@
+.ck-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.ck-progress-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  justify-content: space-between;
+}
+.ck-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  overflow: hidden;
+}
+.ck-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--grad-primary);
+  transition: width 0.45s ease;
+}
+.ck-done {
+  color: var(--ok);
+  font-weight: 700;
+  margin: 0;
+}
+
+.ck-list {
+  display: grid;
+  gap: 18px;
+}
+
+.ck-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.ck-item-done {
+  border-color: #b9e6d2;
+  background: linear-gradient(140deg, #f0fdf7 0%, #fff 55%);
+}
+
+.ck-check {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: 2px solid var(--line-strong);
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.ck-check:hover {
+  border-color: var(--primary-3);
+}
+.ck-check.checked {
+  background: var(--ok);
+  border-color: var(--ok);
+}
+
+.ck-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ck-title h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+.ck-icon { font-size: 1.25rem; }
+
+.ck-body {
+  flex: 1;
+  min-width: 0;
+}
+.ck-body > p {
+  color: var(--muted);
+  margin: 10px 0 4px;
+}
+
+.ck-cmd {
+  margin-top: 12px;
+}
+.ck-cmd-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.ck-note {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  margin-top: 32px;
+}
+.ck-note .card-icon { margin-bottom: 0; }
+
+@media (max-width: 720px) {
+  .ck-note {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

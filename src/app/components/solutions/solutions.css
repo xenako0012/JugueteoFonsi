@@ -1,0 +1,39 @@
+.sol-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.sol-card {
+  position: relative;
+  overflow: hidden;
+}
+.sol-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: var(--grad-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
+}
+
+.sol-urgent {
+  border-color: #f2c9c9;
+  background: linear-gradient(150deg, #fff5f5 0%, #fff 55%);
+}
+.sol-highlight {
+  border-color: #c9d6f2;
+  background: linear-gradient(150deg, #f0f4ff 0%, #fff 55%);
+}
+
+@media (max-width: 1024px) {
+  .sol-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .sol-grid { grid-template-columns: 1fr; }
+}

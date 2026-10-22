@@ -1,59 +1,51 @@
-# JugueteoFonsi
+# JugueteoFonsi — php2bash / PHP2Shell
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Sitio web académico construido con **Angular 22** que explica, de forma clara y ordenada, el
+incidente de seguridad **php2bash** (conocido internacionalmente como **PHP2Shell**):
+CVE-2026-109618 y CVE-2026-109619, dos vulnerabilidades críticas de ejecución remota de código
+en el motor de PHP parcheadas el 21 de octubre de 2026.
 
-## Development server
+## Contenido del sitio
 
-To start a local development server, run:
+1. **PHP básico** — qué es PHP, cómo procesa una petición y por qué un fallo del motor afecta a todas las apps.
+2. **Cronología** — por qué se descubrió (auditoría asistida por IA), cuándo ocurrió y cómo evolucionó.
+3. **El incidente** — en qué consisten los dos CVE (corrupción por OOM y use-after-free), impacto real.
+4. **Versiones afectadas** — de PHP 5.4 (2012) a 8.5.11; versiones corregidas y ramas sin soporte.
+5. **Soluciones** — parcheo, mitigaciones de emergencia, WAF, endurecimiento y verificación.
+6. **Caso práctico Twinteach (Angular + Laravel)** — checklist interactiva paso a paso con comandos.
+7. **Detección** — cómo saber si alguien explotó la vulnerabilidad y qué hacer si sospechas.
+8. **Otros aspectos, FAQ, conclusiones y referencias**.
+
+## Desarrollo
+
+Para iniciar el servidor de desarrollo local:
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación estará disponible en `http://localhost:4200/`. Se recarga automáticamente al
+modificar los archivos fuente.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Compilación
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Los artefactos de compilación se generan en el directorio `dist/`. El proyecto incluye soporte
+SSR (renderizado en servidor) con `@angular/ssr`.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+Ejecuta las pruebas unitarias con [Vitest](https://vitest.dev/).
 
-For end-to-end (e2e) testing, run:
+## Nota
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este sitio es una entrega académica informativa (se permite el uso de IA en su elaboración).
+Ante un incidente real, sigue siempre los advisories oficiales de PHP y de tu proveedor.
