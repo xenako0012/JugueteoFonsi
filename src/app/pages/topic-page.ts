@@ -3,6 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { topics, TopicInfo } from '../data/topics.data';
 import { RevealDirective } from '../shared/reveal.directive';
+import { PageBanner } from '../components/page-banner/page-banner';
 import { PhpBasics } from '../components/php-basics/php-basics';
 import { Timeline } from '../components/timeline/timeline';
 import { IncidentDetail } from '../components/incident-detail/incident-detail';
@@ -23,6 +24,7 @@ import { Closing } from '../components/closing/closing';
   imports: [
     RouterLink,
     RevealDirective,
+    PageBanner,
     PhpBasics,
     Timeline,
     IncidentDetail,
@@ -43,6 +45,17 @@ import { Closing } from '../components/closing/closing';
         <span class="dot"></span>{{ topic.chip }}
       </span>
     </div>
+
+    @if (topic.banner) {
+      <div class="container">
+        <app-page-banner
+          [src]="topic.banner"
+          [alt]="topic.bannerAlt ?? topic.label"
+          [tip]="topic.bannerTip ?? ''"
+          [side]="topic.bannerSide ?? 'left'"
+        />
+      </div>
+    }
 
     @switch (topic.kind) {
       @case ('php') { <app-php-basics /> }
