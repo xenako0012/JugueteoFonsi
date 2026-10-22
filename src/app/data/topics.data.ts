@@ -54,9 +54,7 @@ export const topics: TopicInfo[] = [
     lede: 'Una auditoría del motor de PHP asistida por inteligencia artificial destapó dos fallos de 2012. Después llegó la carrera entre parches, fugas y atacantes.',
     group: 'Fundamentos',
     banner: 'art/banner-cronologia.webp',
-    bannerAlt: 'Personaje chibi sentado sobre disquetes, con despertadores y una hoja de calendario',
-    bannerSide: 'left',
-    bannerTip: 'Toca cada bloque del registro para ver los detalles',
+    bannerAlt: 'Cartel collage «cronología»: Bit sentado sobre disquetes entre despertadores y calendarios, con la insignia «12 días»',
   },
   {
     path: '/incidente',
@@ -102,9 +100,7 @@ export const topics: TopicInfo[] = [
     lede: 'Los pasos concretos para comprobar que un stack con Angular en el frontend y Laravel en el backend está protegido, con comandos listos para copiar.',
     group: 'Protección',
     banner: 'art/banner-checklist.webp',
-    bannerAlt: 'Personaje chibi con lazo azul sosteniendo una libreta de comprobaciones y un lápiz',
-    bannerSide: 'left',
-    bannerTip: 'Ve marcando los pasos: el progreso se guarda mientras navegas',
+    bannerAlt: 'Cartel collage «checklist»: una chica con lazo azul sosteniendo una libreta de comprobaciones, con la insignia «el progreso se guarda»',
   },
   {
     path: '/deteccion',
@@ -117,9 +113,7 @@ export const topics: TopicInfo[] = [
     lede: 'Cómo saber si tu sistema fue explotado: qué buscar en logs, en el sistema y en la aplicación, y qué hacer si encuentras indicios de compromiso.',
     group: 'Protección',
     banner: 'art/banner-deteccion.webp',
-    bannerAlt: 'Personaje chibi detective con lupa examinando una terminal de la que asoma una figura sospechosa',
-    bannerSide: 'right',
-    bannerTip: 'Si algo te huele mal, no borres nada: es evidencia',
+    bannerAlt: 'Cartel collage «detección»: detective con lupa junto a una terminal vigilada por una figura sospechosa, con el aviso «no borres nada»',
   },
   {
     path: '/aspectos',
@@ -131,6 +125,8 @@ export const topics: TopicInfo[] = [
     chipKind: 'info',
     lede: 'El papel de la IA en el descubrimiento, la fragilidad de la divulgación coordinada y por qué la defensa en profundidad sigue siendo la clave.',
     group: 'Recursos',
+    banner: 'art/banner-aspectos.webp',
+    bannerAlt: 'Cartel collage «aspectos»: Kuro, una gatita con gorro bufón rosa, con un ovillo de lana y una llave antigua, y la insignia «claves y detalles»',
   },
   {
     path: '/faq',
@@ -142,6 +138,8 @@ export const topics: TopicInfo[] = [
     chipKind: 'primary',
     lede: 'Las respuestas cortas a las dudas que más se repiten sobre el incidente.',
     group: 'Recursos',
+    banner: 'art/banner-faq.webp',
+    bannerAlt: 'Cartel collage «faq»: Kuro, una gatita con gorro bufón rosa, asomando de una caja entre notas, con la insignia «dudas frecuentes»',
   },
   {
     path: '/conclusiones',
@@ -153,6 +151,8 @@ export const topics: TopicInfo[] = [
     chipKind: 'ok',
     lede: 'Lo que nos llevamos de php2bash y las fuentes consultadas.',
     group: 'Recursos',
+    banner: 'art/banner-conclusiones.webp',
+    bannerAlt: 'Cartel collage «conclusiones»: Bit durmiendo sobre un teclado y Kuro rizada sobre una pila de libros bajo la luna, con la insignia «cierre»',
   },
 ];
 

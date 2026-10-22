@@ -884,3 +884,11 @@ summary:focus-visible {
   .section { padding: 56px 0; }
   .card { padding: 22px; }
 }
+
+/* Huella de gato tipográfica: gatitos ASCII, sin emojis */
+.cat-mark {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}

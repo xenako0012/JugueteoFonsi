@@ -22,13 +22,6 @@
   background: var(--paper);
 }
 
-.gi-sticker {
-  position: absolute;
-  bottom: -14px;
-  right: 18px;
-  transform: rotate(2.5deg);
-}
-
 .gi-copy h2 {
   font-size: clamp(1.7rem, 3.2vw, 2.4rem);
   margin: 14px 0 12px;

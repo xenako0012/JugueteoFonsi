@@ -22,7 +22,7 @@ import { protagonists, Protagonist } from '../../data/protagonists.data';
         <figure class="pr-banner" appReveal>
           <img
             src="art/banner-protagonistas.webp"
-            alt="Tres personajes chibi: una investigadora con lupa y robot, una figura encapuchada con un bicho de peluche y un defensor con escudo y portátil"
+            alt="Cartel collage «protagonistas»: la investigadora con lupa, la figura encapuchada con un bicho de peluche y el defensor con escudo, con la insignia «el reparto»"
             loading="lazy"
           />
         </figure>

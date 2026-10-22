@@ -95,24 +95,33 @@
 /* --- cta final --- */
 
 .home-cta-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  flex-wrap: wrap;
-  padding: clamp(28px, 4vw, 44px);
   border-radius: var(--radius);
   border: 2px solid var(--ink);
-  background: var(--grad-wash), var(--paper);
+  background: var(--paper);
   box-shadow: 6px 6px 0 var(--ink);
+  overflow: hidden;
 }
-.home-cta-box h2 {
-  margin: 14px 0 8px;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+.cta-art {
+  width: 100%;
+  display: block;
 }
-.home-cta-box p {
+.cta-bar {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 20px clamp(18px, 3vw, 28px);
+  border-top: 2px solid var(--ink);
+}
+.cta-bar-text {
+  flex: 1 1 320px;
+}
+.cta-bar-text p {
   color: var(--muted);
-  max-width: 56ch;
+  margin: 10px 0 0;
+  max-width: 58ch;
+}
+.cta-note {
   margin: 0;
 }
 
