@@ -1,0 +1,70 @@
+.pr-banner {
+  margin: 0 0 36px;
+}
+.pr-banner img {
+  width: 100%;
+  border-radius: 22px;
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  background: var(--paper);
+  transform: rotate(0.4deg);
+}
+
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.pr-card {
+  display: flex;
+  flex-direction: column;
+}
+.pr-card h3 {
+  font-size: 1.12rem;
+}
+.pr-card p {
+  margin: 0;
+  flex: 1;
+}
+
+.pr-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.pr-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--primary-softer);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 32%, transparent);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.pr-annotation {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .pr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .pr-grid {
+    grid-template-columns: 1fr;
+  }
+}

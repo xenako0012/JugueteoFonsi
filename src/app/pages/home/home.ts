@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Hero } from '../../components/hero/hero';
+import { GuideIntro } from '../../components/guide-intro/guide-intro';
+import { Protagonists } from '../../components/protagonists/protagonists';
 import { Squiggle } from '../../shared/squiggle';
 import { RevealDirective } from '../../shared/reveal.directive';
 import { topicGroups, TopicInfo } from '../../data/topics.data';
@@ -11,9 +13,10 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
  */
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, Hero, Squiggle, RevealDirective],
+  imports: [RouterLink, Hero, GuideIntro, Protagonists, Squiggle, RevealDirective],
   template: `
     <app-hero />
+    <app-guide-intro />
 
     <!-- resumen express -->
     <section class="section home-summary">
@@ -40,6 +43,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
     </section>
 
     <app-squiggle [width]="220" />
+    <app-protagonists />
 
     <!-- menú visual de contenidos -->
     <section class="section home-menu">

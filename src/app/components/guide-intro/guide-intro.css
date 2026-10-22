@@ -1,0 +1,57 @@
+.gi {
+  padding-top: clamp(32px, 4vw, 56px);
+}
+
+.gi-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+}
+
+.gi-art {
+  position: relative;
+}
+
+.gi-img {
+  width: 100%;
+  border-radius: 22px;
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(-1.2deg);
+  background: var(--paper);
+}
+
+.gi-sticker {
+  position: absolute;
+  bottom: -14px;
+  right: 18px;
+  transform: rotate(2.5deg);
+}
+
+.gi-copy h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  margin: 14px 0 12px;
+}
+.gi-copy p {
+  color: var(--muted);
+}
+.gi-copy p strong {
+  color: var(--ink-2);
+}
+
+.gi-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+@media (max-width: 900px) {
+  .gi-grid {
+    grid-template-columns: 1fr;
+  }
+  .gi-art {
+    max-width: 560px;
+  }
+}

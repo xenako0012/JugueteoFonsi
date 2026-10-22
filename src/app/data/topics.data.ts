@@ -22,6 +22,13 @@ export interface TopicInfo {
   chipKind: 'primary' | 'danger' | 'warn' | 'ok' | 'info';
   lede: string;
   group: 'Fundamentos' | 'Protección' | 'Recursos';
+  /** Banner ilustrado opcional de la página. */
+  banner?: string;
+  bannerAlt?: string;
+  /** Lado del bocadillo: coincide con el espacio libre del banner. */
+  bannerSide?: 'left' | 'right';
+  /** Frase de la mascota sobre el banner. */
+  bannerTip?: string;
 }
 
 export const topics: TopicInfo[] = [
@@ -46,6 +53,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'info',
     lede: 'Una auditoría del motor de PHP asistida por inteligencia artificial destapó dos fallos de 2012. Después llegó la carrera entre parches, fugas y atacantes.',
     group: 'Fundamentos',
+    banner: 'art/banner-cronologia.webp',
+    bannerAlt: 'Personaje chibi sentado sobre disquetes, con despertadores y una hoja de calendario',
+    bannerSide: 'left',
+    bannerTip: 'Toca cada bloque del registro para ver los detalles',
   },
   {
     path: '/incidente',
@@ -90,6 +101,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'primary',
     lede: 'Los pasos concretos para comprobar que un stack con Angular en el frontend y Laravel en el backend está protegido, con comandos listos para copiar.',
     group: 'Protección',
+    banner: 'art/banner-checklist.webp',
+    bannerAlt: 'Personaje chibi con lazo azul sosteniendo una libreta de comprobaciones y un lápiz',
+    bannerSide: 'left',
+    bannerTip: 'Ve marcando los pasos: el progreso se guarda mientras navegas',
   },
   {
     path: '/deteccion',
@@ -101,6 +116,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'danger',
     lede: 'Cómo saber si tu sistema fue explotado: qué buscar en logs, en el sistema y en la aplicación, y qué hacer si encuentras indicios de compromiso.',
     group: 'Protección',
+    banner: 'art/banner-deteccion.webp',
+    bannerAlt: 'Personaje chibi detective con lupa examinando una terminal de la que asoma una figura sospechosa',
+    bannerSide: 'right',
+    bannerTip: 'Si algo te huele mal, no borres nada: es evidencia',
   },
   {
     path: '/aspectos',
