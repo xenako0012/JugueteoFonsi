@@ -34,7 +34,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
           <a class="btn btn-ghost" routerLink="/caso-practico">Ir a la checklist</a>
         </div>
         <p class="annotation home-annotation" appReveal>
-          <span class="hand-arrow">↳</span> cada tema vive en su propia página: elige por dónde entrar
+          <span class="hand-arrow">↳</span> Si quieres ver la historia completa, ve a la cronología o al análisis del incidente.
         </p>
       </div>
     </section>

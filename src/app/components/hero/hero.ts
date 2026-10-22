@@ -38,8 +38,7 @@ import { RouterLink } from '@angular/router';
               <a class="btn btn-ghost" routerLink="/soluciones">Cómo proteger mi sistema</a>
             </div>
             <p class="annotation hero-annotation">
-              <span class="hand-arrow">↳</span> y si vas directo al grano, la checklist del caso práctico tiene
-              su propia página
+              <span class="hand-arrow">↳</span> Si tienes más dudas, ve mirando en FAQ en la sección de soluciones.
             </p>
           </div>
 
