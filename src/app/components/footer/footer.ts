@@ -25,7 +25,7 @@ import { RouterLink } from '@angular/router';
         </nav>
 
         <div class="footer-meta">
-          <p>Práctica académica de seguridad informática · Sitio construido con Angular</p>
+          <p>Práctica académica de seguridad informática · Sitio construido con Angular · Autora A210P15</p>
           <p class="footer-note">
             El uso de IA está permitido y se ha utilizado en la elaboración de esta entrega. Contenido informativo:
             ante un incidente real, sigue siempre los advisories oficiales de tu proveedor.
