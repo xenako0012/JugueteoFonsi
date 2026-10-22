@@ -20,7 +20,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 
         <div class="grid grid-3 php-cards">
           <article class="card" appReveal data-delay="1">
-            <div class="card-icon">🐘</div>
+            <div class="card-icon">$_</div>
             <h3>Un lenguaje de servidor</h3>
             <p>
               PHP es un lenguaje de programación que se ejecuta <strong>en el servidor</strong>, no en el
@@ -31,7 +31,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
           </article>
 
           <article class="card" appReveal data-delay="2">
-            <div class="card-icon info">🔄</div>
+            <div class="card-icon info">⏎</div>
             <h3>El ciclo de vida de una petición</h3>
             <p>
               Cada clic en una web dispara una petición HTTP. El servidor web (nginx o Apache) se la pasa a PHP
@@ -52,7 +52,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
           </article>
 
           <article class="card" appReveal data-delay="3">
-            <div class="card-icon warn">🔢</div>
+            <div class="card-icon warn">#</div>
             <h3>Versiones y parches</h3>
             <p>
               PHP usa versiones <span class="code-inline">mayor.menor.parche</span> (por ejemplo
@@ -90,11 +90,11 @@ export class PhpBasics {
     'PHP 8.3.35  →  vulnerable  ⚠\nPHP 8.3.36  →  parcheado   ✓\n           ↑\n   solo cambia el parche';
 
   protected readonly flowSteps = [
-    { icon: '🌐', label: 'Navegador', hot: false },
-    { icon: '🧭', label: 'nginx / Apache', hot: false },
-    { icon: '🔌', label: 'SAPI (php-fpm)', hot: false },
-    { icon: '⚙️', label: 'Motor de PHP', hot: true },
-    { icon: '📦', label: 'App (Laravel)', hot: false },
-    { icon: '✅', label: 'Respuesta', hot: false },
+    { icon: '01', label: 'Navegador', hot: false },
+    { icon: '02', label: 'nginx / Apache', hot: false },
+    { icon: '03', label: 'SAPI (php-fpm)', hot: false },
+    { icon: '04', label: 'Motor de PHP', hot: true },
+    { icon: '05', label: 'App (Laravel)', hot: false },
+    { icon: '06', label: 'Respuesta', hot: false },
   ];
 }

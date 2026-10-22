@@ -28,7 +28,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             <div class="ck-bar-fill" [style.width.%]="percent()"></div>
           </div>
           @if (percent() === 100) {
-            <p class="ck-done">🎉 Auditoría completada: sistema verificado y protegido.</p>
+            <p class="ck-done">✓ Auditoría completada: sistema verificado y protegido.</p>
           }
           <button class="btn btn-ghost btn-sm" type="button" (click)="reset()">Reiniciar checklist</button>
         </div>
@@ -66,7 +66,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
         </div>
 
         <div class="card ck-note" appReveal>
-          <div class="card-icon info">📌</div>
+          <div class="card-icon info">✉</div>
           <div>
             <h3>¿Hosting gestionado o sin acceso al servidor?</h3>
             <p>

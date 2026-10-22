@@ -20,7 +20,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 
         <div class="grid grid-3 v-summary">
           <div class="card v-card v-card-danger" appReveal data-delay="1">
-            <div class="card-icon danger">⚠️</div>
+            <div class="card-icon danger">⚠</div>
             <h3>Vulnerables</h3>
             <p>
               Todas las versiones desde <strong>5.4.0</strong> hasta <strong>8.5.11</strong>: PHP-FPM,
@@ -28,7 +28,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </p>
           </div>
           <div class="card v-card v-card-ok" appReveal data-delay="2">
-            <div class="card-icon ok">✅</div>
+            <div class="card-icon ok">✓</div>
             <h3>Corregidas (21 oct 2026)</h3>
             <p>
               <strong>8.5.12 · 8.4.27 · 8.3.36 · 8.2.35</strong>. Publicadas fuera de banda, 25 minutos antes de lo
@@ -36,7 +36,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </p>
           </div>
           <div class="card v-card v-card-warn" appReveal data-delay="3">
-            <div class="card-icon warn">🕰️</div>
+            <div class="card-icon warn">∅</div>
             <h3>Ramas sin soporte (EOL)</h3>
             <p>
               5.x, 7.x y 8.0/8.1 están fuera del soporte oficial: <strong>no recibirán parches de PHP.net</strong>.
@@ -74,7 +74,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
 
         <div class="grid grid-2 v-extra">
           <div class="card" appReveal data-delay="1">
-            <div class="card-icon danger">🎯</div>
+            <div class="card-icon danger">⚠</div>
             <h3>El escenario más peligroso: Apache + mod_php</h3>
             <p>
               Los investigadores demostraron el ataque en una petición <strong>sin autenticar</strong> que se resolvía
@@ -84,7 +84,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </p>
           </div>
           <div class="card" appReveal data-delay="2">
-            <div class="card-icon ok">🅰️</div>
+            <div class="card-icon ok">▲</div>
             <h3>¿Y el frontend de Angular?</h3>
             <p>
               Angular se compila a JavaScript y corre en el navegador: <strong>no utiliza PHP</strong> y no es

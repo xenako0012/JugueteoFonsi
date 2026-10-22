@@ -33,7 +33,13 @@
   border-color: color-mix(in srgb, var(--danger) 35%, transparent);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--danger) 18%, transparent);
 }
-.flow-icon { font-size: 1.15rem; }
+.flow-icon {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
 .flow-label {
   font-size: 0.72rem;
   font-weight: 700;

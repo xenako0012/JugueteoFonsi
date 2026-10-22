@@ -39,7 +39,7 @@ interface Lesson {
 export class Lessons {
   protected readonly lessons: Lesson[] = [
     {
-      icon: '🌍',
+      icon: '★',
       kind: 'primary',
       title: 'PHP mueve gran parte de internet',
       text:
@@ -47,7 +47,7 @@ export class Lessons {
         'Drupal, Joomla, Moodle, Laravel… Por eso un fallo del motor es un incidente global, no un problema local.',
     },
     {
-      icon: '🤖',
+      icon: '⌘',
       kind: 'info',
       title: 'La IA, coprotagonista del hallazgo',
       text:
@@ -56,7 +56,7 @@ export class Lessons {
         'importará más que nunca.',
     },
     {
-      icon: '⏳',
+      icon: '☠',
       kind: 'danger',
       title: 'La ventana de «seguridad por oscuridad» ya no existe',
       text:
@@ -64,7 +64,7 @@ export class Lessons {
         'Asumir que nadie sabe de un fallo hasta que se publica es un error: monitoriza siempre.',
     },
     {
-      icon: '📢',
+      icon: '✉',
       kind: 'warn',
       title: 'La divulgación coordinada es frágil',
       text:
@@ -73,7 +73,7 @@ export class Lessons {
         '(«pre-patching»), y a los usuarios: prepararse para parchear en horas, no en semanas.',
     },
     {
-      icon: '🛡️',
+      icon: '✚',
       kind: 'ok',
       title: 'Defensa en profundidad: el WAF compra tiempo, el parche cura',
       text:
@@ -82,7 +82,7 @@ export class Lessons {
         'actualización del motor.',
     },
     {
-      icon: '📋',
+      icon: '☰',
       kind: 'primary',
       title: 'No se parchea lo que no se inventaría',
       text:
