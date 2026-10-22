@@ -885,29 +885,6 @@ summary:focus-visible {
   .card { padding: 22px; }
 }
 
-/* ── Tipografía «sticker»: letras infladas estilo tablero de pegatinas.
-   Usa la tipografía display real del sitio (Bricolage Grotesque) para que
-   las letras de las zonas personales casen con la estética web ── */
-.sticker-title {
-  font-family: var(--display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: transparent;
-  background: linear-gradient(
-    180deg,
-    var(--paper) 0 58%,
-    color-mix(in srgb, var(--primary) 32%, var(--paper)) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-stroke: 2.5px var(--ink);
-  paint-order: stroke fill;
-  filter:
-    drop-shadow(0 2px 0 var(--primary))
-    drop-shadow(0 5px 0 color-mix(in srgb, var(--ink) 22%, transparent));
-}
-
 /* Huella de gato tipográfica: gatitos ASCII, sin emojis */
 .cat-mark {
   font-family: var(--mono);

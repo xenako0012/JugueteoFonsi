@@ -12,7 +12,7 @@ import { protagonists, Protagonist } from '../../data/protagonists.data';
       <div class="container">
         <div class="section-head" appReveal>
           <span class="chip chip-info"><span class="dot"></span>Nueva sección</span>
-          <h2 class="sticker-title">Los protagonistas del incidente</h2>
+          <h2>Los <span class="grad-text">protagonistas</span> del incidente</h2>
           <p class="lede">
             Detrás de cualquier incidente hay personajes. Estos son los cuatro papeles que se repartieron
             php2bash —y que se repiten en casi todos los fallos de seguridad—.
@@ -22,7 +22,7 @@ import { protagonists, Protagonist } from '../../data/protagonists.data';
         <figure class="pr-banner" appReveal>
           <img
             src="art/banner-protagonistas.webp"
-            alt="Tres personajes chibi: una investigadora con lupa y robot, una figura encapuchada con un bicho de peluche y un defensor con escudo y portátil"
+            alt="Cartel collage «protagonistas»: la investigadora con lupa, la figura encapuchada con un bicho de peluche y el defensor con escudo, con la insignia «el reparto»"
             loading="lazy"
           />
         </figure>

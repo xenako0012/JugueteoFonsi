@@ -81,16 +81,17 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
           <img
             class="cta-art"
             src="art/banner-cierre.webp"
-            alt="Bit y Kuro, su gatita con gorro bufón rosa, celebrando entre confeti, corazones y huellas de gato"
+            alt="Cartel collage «revisa tu stack»: Bit y Kuro celebrando entre confeti, con una insignia que dice angular + laravel"
             loading="lazy"
           />
-          <div class="cta-copy">
-            <span class="sticker">para entregar ✎</span>
-            <h2 class="sticker-title cta-title">¿Tu stack es Angular + Laravel?</h2>
-            <p>
-              La checklist del caso práctico recorre los 8 pasos para comprobar que el backend está protegido,
-              con comandos listos para copiar y marcar a medida que avanzas.
-            </p>
+          <div class="cta-bar">
+            <div class="cta-bar-text">
+              <span class="sticker">para entregar ✎</span>
+              <p>
+                La checklist del caso práctico recorre los 8 pasos para comprobar que el backend está protegido,
+                con comandos listos para copiar y marcar a medida que avanzas.
+              </p>
+            </div>
             <a class="btn btn-primary" routerLink="/caso-practico">Abrir la checklist</a>
             <p class="cat-mark cta-note">=^..^= Kuro dice: marca cada paso</p>
           </div>
