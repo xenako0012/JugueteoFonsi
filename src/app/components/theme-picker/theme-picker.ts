@@ -46,7 +46,7 @@ import { ThemeService, ThemeId } from '../../services/theme.service';
         aria-label="Cambiar apariencia de la página"
         title="Apariencia"
       >
-        🎨
+        ◐
       </button>
     </div>
   `,

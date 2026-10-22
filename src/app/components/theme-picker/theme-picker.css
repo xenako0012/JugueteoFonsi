@@ -9,7 +9,9 @@
   border: 2px solid var(--ink);
   background: var(--paper);
   box-shadow: var(--shadow-btn);
+  font-family: var(--mono);
   font-size: 1.35rem;
+  color: var(--ink);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }

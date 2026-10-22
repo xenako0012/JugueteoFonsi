@@ -82,7 +82,12 @@
   margin: 0;
   font-size: 1.12rem;
 }
-.ck-icon { font-size: 1.25rem; }
+.ck-icon {
+  font-family: var(--mono);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--primary);
+}
 
 .ck-body {
   flex: 1;
