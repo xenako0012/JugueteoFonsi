@@ -78,15 +78,22 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
     <section class="section home-cta">
       <div class="container">
         <div class="home-cta-box" appReveal>
-          <div>
+          <img
+            class="cta-art"
+            src="art/banner-cierre.webp"
+            alt="Bit y Kuro, su gatita con gorro bufón rosa, celebrando entre confeti, corazones y huellas de gato"
+            loading="lazy"
+          />
+          <div class="cta-copy">
             <span class="sticker">para entregar ✎</span>
-            <h2>¿Tu stack es Angular + Laravel?</h2>
+            <h2 class="sticker-title cta-title">¿Tu stack es Angular + Laravel?</h2>
             <p>
               La checklist del caso práctico recorre los 8 pasos para comprobar que el backend está protegido,
               con comandos listos para copiar y marcar a medida que avanzas.
             </p>
+            <a class="btn btn-primary" routerLink="/caso-practico">Abrir la checklist</a>
+            <p class="cat-mark cta-note">=^..^= Kuro dice: marca cada paso</p>
           </div>
-          <a class="btn btn-primary" routerLink="/caso-practico">Abrir la checklist</a>
         </div>
       </div>
     </section>

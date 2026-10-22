@@ -131,6 +131,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'info',
     lede: 'El papel de la IA en el descubrimiento, la fragilidad de la divulgación coordinada y por qué la defensa en profundidad sigue siendo la clave.',
     group: 'Recursos',
+    banner: 'art/banner-aspectos.webp',
+    bannerAlt: 'Kuro, una gatita negra con gorro bufón rosa, jugando con un ovillo de lana junto a una llave antigua',
+    bannerSide: 'right',
+    bannerTip: 'Kuro desenreda los puntos clave por ti =^..^=',
   },
   {
     path: '/faq',
@@ -142,6 +146,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'primary',
     lede: 'Las respuestas cortas a las dudas que más se repiten sobre el incidente.',
     group: 'Recursos',
+    banner: 'art/banner-faq.webp',
+    bannerAlt: 'Kuro, una gatita negra con gorro bufón rosa, asomando de una caja entre notas y signos de interrogación',
+    bannerSide: 'right',
+    bannerTip: '¿Dudas? Están todas aquí, bien empaquetadas =^..^=',
   },
   {
     path: '/conclusiones',
@@ -153,6 +161,10 @@ export const topics: TopicInfo[] = [
     chipKind: 'ok',
     lede: 'Lo que nos llevamos de php2bash y las fuentes consultadas.',
     group: 'Recursos',
+    banner: 'art/banner-conclusiones.webp',
+    bannerAlt: 'Bit durmiendo sobre un teclado mientras Kuro duerme rizada sobre una pila de libros bajo la luna',
+    bannerSide: 'left',
+    bannerTip: 'Zzz… Kuro duerme tranquila si tu servidor está parcheado',
   },
 ];
 
