@@ -1,10 +1,14 @@
 /** Datos del contenido del incidente php2bash / PHP2Shell (octubre de 2026). */
 
 export interface TimelineEvent {
+  /** Identificador tipo commit del log (estética terminal). */
+  hash: string;
   date: string;
   tag: string;
   tagKind: 'primary' | 'danger' | 'warn' | 'ok' | 'info';
   title: string;
+  /** Una línea para ver sin desplegar (evita muros de texto). */
+  short: string;
   text: string;
 }
 
@@ -30,65 +34,79 @@ export interface FaqItem {
 
 export const timeline: TimelineEvent[] = [
   {
+    hash: 'a1f4e02',
     date: 'Jul — Ago 2026',
     tag: 'Descubrimiento',
     tagKind: 'primary',
     title: 'Dos fallos dormidos desde 2012 salen a la luz',
+    short: 'Auditoría del motor de PHP asistida por IA → dos vulnerabilidades críticas en rutas de limpieza de memoria.',
     text:
       'Investigadores de las firmas Calif y Wiz auditan el núcleo de PHP con ayuda de agentes de IA ' +
       '(GPT‑5.6 Sol de OpenAI y Wiz Atlas con Gemini 4 Argon). Encuentran dos vulnerabilidades críticas ' +
       'en rutas poco visibles del motor (limpieza de memoria y cierre de peticiones) presentes desde PHP 5.4.',
   },
   {
+    hash: 'b7c2d18',
     date: '11 de agosto de 2026',
     tag: 'Divulgación coordinada',
     tagKind: 'info',
     title: 'El proyecto PHP recibe los primeros informes',
+    short: 'Se abre el proceso de divulgación coordinada con Calif, Wiz, OpenAI y Quarkslab.',
     text:
       'Se abre un proceso de divulgación coordinada con los descubridores (Calif, Wiz, OpenAI y Quarkslab). ' +
       'El objetivo: preparar parches y anunciarlo todo a la vez, evitando que los atacantes se adelanten.',
   },
   {
+    hash: 'c0ffee4',
     date: '17 de octubre de 2026',
     tag: 'Primer ataque',
     tagKind: 'danger',
-    title: 'Se observa el primer intento de explotación… cuatro días antes del anuncio',
+    title: 'Primer intento de explotación… cuatro días antes del anuncio',
+    short: 'MadPot (Amazon) registra un intento desde una red de anonimización: la oscuridad ya no protegía.',
     text:
       'La red de señuelos MadPot de Amazon registra un intento de explotación procedente de una red de ' +
       'anonimización. La «seguridad por oscuridad» ya no existía: alguien conocía el fallo antes de que se hiciera público.',
   },
   {
+    hash: 'd3ad017',
     date: '20 de octubre de 2026',
     tag: 'Anuncio + fuga',
     tagKind: 'warn',
-    title: 'PHP anuncia un parche de emergencia… y se filtran detalles técnicos',
+    title: 'Parche de emergencia anunciado… y detalles técnicos filtrados',
+    short: 'PHP avisa de una release fuera de banda; en foros circulan detalles y nace el apodo php2shell.',
     text:
       'El equipo de seguridad de PHP avisa de una release fuera de banda para el día 21 a las 14:00 UTC. ' +
       'En foros empiezan a circular detalles del fallo y el apodo del incidente: php2shell / php2bash («de PHP a shell»).',
   },
   {
+    hash: 'e5ac021',
     date: '21 de octubre · 02:00 UTC',
     tag: 'Carrera contra el reloj',
     tagKind: 'danger',
-    title: 'Aparecen pruebas de concepto (PoC) públicas ~12 horas antes del embargo',
+    title: 'PoC públicas ~12 horas antes del embargo',
+    short: 'Aparecen pruebas de concepto sobre las 02:00 UTC; los advisories se publican a las 13:34 UTC.',
     text:
       'Amazon detecta los primeros PoC sobre las 02:00 UTC y más intentos entre las 02:00 y las 08:00 UTC. ' +
       'A las 13:34 UTC se publican los advisories en GitHub, 26 minutos antes de la hora anunciada.',
   },
   {
+    hash: 'f1x3d00',
     date: '21 de octubre · 13:35 UTC',
     tag: 'Parches',
     tagKind: 'ok',
-    title: 'PHP publica las versiones corregidas, 25 minutos antes de lo previsto',
+    title: 'PHP publica las versiones corregidas',
+    short: '8.5.12 · 8.4.27 · 8.3.36 · 8.2.35 — 25 minutos antes de lo previsto. Cloudflare ya protegía.',
     text:
       'Salen PHP 8.5.12, 8.4.27, 8.3.36 y 8.2.35. Esa misma madrugada (03:02 UTC) Cloudflare ya había activado ' +
       'reglas WAF por defecto para todos sus clientes, gratis y de pago.',
   },
   {
+    hash: 'baadf00',
     date: '21 — 22 de octubre de 2026',
     tag: 'Explotación masiva',
     tagKind: 'danger',
-    title: 'Miles de intentos por hora y avisos oficiales en todo el mundo',
+    title: 'Miles de intentos por hora y avisos oficiales',
+    short: 'Cloudflare ve picos de miles de intentos; la NSA avisa y algunos gobiernos retiran sitios web.',
     text:
       'Cloudflare observa picos de miles de intentos y atacantes adaptando sus tácticas para burlar protecciones. ' +
       'La NSA emite advertencias, algunos gobiernos retiran temporalmente sitios web y se confirma explotación real.',

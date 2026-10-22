@@ -49,6 +49,6 @@
 }
 
 .faq-item[open] {
-  border-color: #d9d6f8;
+  border-color: var(--primary-2);
   box-shadow: var(--shadow-2);
 }

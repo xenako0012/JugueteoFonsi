@@ -10,10 +10,13 @@ import { Component } from '@angular/core';
 
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="chip chip-primary">
-            <span class="dot"></span>
-            Práctica de seguridad · Incidente de octubre de 2026
-          </span>
+          <div class="hero-topline">
+            <span class="chip chip-primary">
+              <span class="dot"></span>
+              Práctica de seguridad · Octubre de 2026
+            </span>
+            <span class="sticker">se admiten parches urgentes 🩹</span>
+          </div>
 
           <h1>
             De PHP a shell:<br />
@@ -27,9 +30,15 @@ import { Component } from '@angular/core';
             comprobar que un stack <strong>Angular + Laravel</strong> está protegido.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#incidente">Entender el incidente</a>
-            <a class="btn btn-ghost" href="#soluciones">Cómo proteger mi sistema</a>
+          <div class="hero-actions-wrap">
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#incidente">Entender el incidente</a>
+              <a class="btn btn-ghost" href="#soluciones">Cómo proteger mi sistema</a>
+            </div>
+            <p class="annotation hero-annotation">
+              <span class="hand-arrow">↳</span> y si vas directo al grano, la checklist del caso práctico está en
+              el menú
+            </p>
           </div>
 
           <div class="hero-stats">

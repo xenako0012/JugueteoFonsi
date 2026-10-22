@@ -10,6 +10,7 @@ import { Detection } from '../../components/detection/detection';
 import { Lessons } from '../../components/lessons/lessons';
 import { Faq } from '../../components/faq/faq';
 import { Closing } from '../../components/closing/closing';
+import { Squiggle } from '../../shared/squiggle';
 
 @Component({
   selector: 'app-home',
@@ -25,15 +26,19 @@ import { Closing } from '../../components/closing/closing';
     Lessons,
     Faq,
     Closing,
+    Squiggle,
   ],
   template: `
     <app-hero />
     <app-php-basics />
+    <app-squiggle [width]="240" />
     <app-timeline />
     <app-incident-detail />
+    <app-squiggle [width]="200" />
     <app-versions />
     <app-solutions />
     <app-checklist />
+    <app-squiggle [width]="240" />
     <app-detection />
     <app-lessons />
     <app-faq />

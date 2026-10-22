@@ -22,7 +22,7 @@
   align-items: center;
   gap: 4px;
   background: var(--primary-softer);
-  border: 1px solid #e3e0ff;
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
   border-radius: var(--radius-sm);
   padding: 10px 8px;
   min-width: 86px;
@@ -30,8 +30,8 @@
 }
 .flow-step.flow-hot {
   background: var(--danger-soft);
-  border-color: #fbdcdc;
-  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.14);
+  border-color: color-mix(in srgb, var(--danger) 35%, transparent);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--danger) 18%, transparent);
 }
 .flow-icon { font-size: 1.15rem; }
 .flow-label {
@@ -52,8 +52,8 @@
   gap: 22px;
   align-items: flex-start;
   margin-top: 26px;
-  background: linear-gradient(120deg, #fff7ed 0%, #fff 60%);
-  border-color: #f5e3c8;
+  background: linear-gradient(120deg, var(--warn-soft) 0%, var(--paper) 60%);
+  border-color: color-mix(in srgb, var(--warn) 35%, transparent);
 }
 .php-note .card-icon { margin-bottom: 0; }
 .php-note p { max-width: none; }

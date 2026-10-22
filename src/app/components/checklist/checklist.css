@@ -17,6 +17,7 @@
   height: 12px;
   border-radius: 999px;
   background: var(--primary-soft);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 30%, transparent);
   overflow: hidden;
 }
 .ck-bar-fill {
@@ -44,8 +45,8 @@
     box-shadow 0.25s ease;
 }
 .ck-item-done {
-  border-color: #b9e6d2;
-  background: linear-gradient(140deg, #f0fdf7 0%, #fff 55%);
+  border-color: color-mix(in srgb, var(--ok) 45%, transparent);
+  background: linear-gradient(140deg, var(--ok-soft) 0%, var(--paper) 55%);
 }
 
 .ck-check {
@@ -53,15 +54,15 @@
   width: 30px;
   height: 30px;
   margin-top: 4px;
-  border-radius: 10px;
+  border-radius: 9px;
   border: 2px solid var(--line-strong);
-  background: #fff;
+  background: var(--paper);
   cursor: pointer;
   display: grid;
   place-items: center;
   font-size: 1rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--surface);
   transition: all 0.2s ease;
 }
 .ck-check:hover {

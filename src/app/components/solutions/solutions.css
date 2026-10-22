@@ -11,24 +11,26 @@
 .sol-num {
   width: 42px;
   height: 42px;
-  border-radius: 13px;
+  border-radius: 11px;
   display: grid;
   place-items: center;
   background: var(--grad-primary);
-  color: #fff;
+  color: var(--surface);
   font-weight: 800;
   font-size: 1.05rem;
   margin-bottom: 16px;
-  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
+[data-theme='alto-contraste'] .sol-num { color: var(--bg); }
 
 .sol-urgent {
-  border-color: #f2c9c9;
-  background: linear-gradient(150deg, #fff5f5 0%, #fff 55%);
+  border-color: color-mix(in srgb, var(--danger) 35%, transparent);
+  background: linear-gradient(150deg, var(--danger-soft) 0%, var(--paper) 55%);
 }
 .sol-highlight {
-  border-color: #c9d6f2;
-  background: linear-gradient(150deg, #f0f4ff 0%, #fff 55%);
+  border-color: color-mix(in srgb, var(--info) 35%, transparent);
+  background: linear-gradient(150deg, var(--info-soft) 0%, var(--paper) 55%);
 }
 
 @media (max-width: 1024px) {

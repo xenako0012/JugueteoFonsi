@@ -8,8 +8,8 @@
   margin-bottom: 40px;
 }
 .attack-step {
-  background: #fff;
-  border: 1px solid var(--line);
+  background: var(--paper);
+  border: 1.5px solid var(--line-strong);
   border-radius: var(--radius-md);
   padding: 16px 18px;
   text-align: center;
@@ -39,8 +39,8 @@
 
 /* panel de pestañas */
 .cve-panel {
-  background: #fff;
-  border: 1px solid var(--line);
+  background: var(--paper);
+  border: 1.5px solid var(--line-strong);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-2);
@@ -54,9 +54,9 @@
   flex-wrap: wrap;
 }
 .cve-tab {
-  border: 1px solid transparent;
+  border: 1.5px solid transparent;
   background: transparent;
-  border-radius: 999px;
+  border-radius: 11px;
   padding: 10px 20px;
   font-family: var(--font);
   font-size: 0.92rem;
@@ -68,9 +68,11 @@
 .cve-tab:hover { color: var(--primary); }
 .cve-tab.active {
   background: var(--grad-primary);
-  color: #fff;
-  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.3);
+  color: var(--surface);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
+[data-theme='alto-contraste'] .cve-tab.active { color: var(--bg); }
 
 .cve-body {
   display: grid;
@@ -106,8 +108,8 @@
 /* impacto */
 .impact-card {
   margin-top: 40px;
-  background: linear-gradient(120deg, #fdf2f2 0%, #fff 55%);
-  border-color: #f6dada;
+  background: linear-gradient(120deg, var(--danger-soft) 0%, var(--paper) 55%);
+  border-color: color-mix(in srgb, var(--danger) 30%, transparent);
 }
 .impact-grid {
   gap: 10px 32px;

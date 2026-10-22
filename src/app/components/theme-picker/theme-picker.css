@@ -1,0 +1,125 @@
+.tp-wrap {
+  position: relative;
+}
+
+.tp-fab {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow-btn);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.tp-fab:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.tp-fab:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.tp-panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 14px);
+  width: min(340px, calc(100vw - 48px));
+  padding: 18px;
+  z-index: 60;
+  animation: tp-in 0.22s ease;
+}
+.tp-panel:hover {
+  transform: none;
+}
+
+@keyframes tp-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.tp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.tp-head strong {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.tp-close {
+  border: 1.5px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--muted);
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tp-hint {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.tp-grid {
+  display: grid;
+  gap: 8px;
+  max-height: min(52vh, 380px);
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.tp-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'sw label' 'sw hint';
+  column-gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.tp-option:hover {
+  border-color: var(--primary-2);
+  transform: translateX(2px);
+}
+.tp-option.active {
+  border-color: var(--primary);
+  background: var(--primary-softer);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.tp-swatches {
+  grid-area: sw;
+  display: flex;
+  gap: 4px;
+}
+.tp-swatches i {
+  width: 16px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+}
+
+.tp-label {
+  grid-area: label;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+.tp-hint-sm {
+  grid-area: hint;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
