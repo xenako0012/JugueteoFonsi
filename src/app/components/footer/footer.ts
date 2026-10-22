@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
+  imports: [RouterLink],
   template: `
     <footer class="footer">
       <div class="container footer-inner">
@@ -14,12 +16,12 @@ import { Component } from '@angular/core';
         </div>
 
         <nav class="footer-nav" aria-label="Navegación del pie">
-          <a href="#php">PHP básico</a>
-          <a href="#cronologia">Cronología</a>
-          <a href="#incidente">El incidente</a>
-          <a href="#soluciones">Soluciones</a>
-          <a href="#caso-practico">Caso práctico</a>
-          <a href="#deteccion">Detección</a>
+          <a routerLink="/php">PHP básico</a>
+          <a routerLink="/cronologia">Cronología</a>
+          <a routerLink="/incidente">El incidente</a>
+          <a routerLink="/soluciones">Soluciones</a>
+          <a routerLink="/caso-practico">Caso práctico</a>
+          <a routerLink="/deteccion">Detección</a>
         </nav>
 
         <div class="footer-meta">

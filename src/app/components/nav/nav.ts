@@ -1,24 +1,22 @@
 import { Component, ElementRef, HostListener, inject, signal } from '@angular/core';
-
-interface MenuGroup {
-  title: string;
-  items: { href: string; icon: string; label: string; desc: string }[];
-}
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { topicGroups, TopicInfo } from '../../data/topics.data';
 
 @Component({
   selector: 'app-nav',
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <header class="nav" [class.nav-scrolled]="scrolled()">
       <div class="container nav-inner">
-        <a class="brand" href="#top" (click)="closeAll()">
+        <a class="brand" routerLink="/" (click)="closeAll()">
           <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
           <span class="brand-text">php<span class="grad-text">2</span>bash</span>
         </a>
 
         <nav class="nav-links" aria-label="Navegación principal">
-          <a href="#php">PHP básico</a>
-          <a href="#incidente">El incidente</a>
-          <a href="#soluciones">Soluciones</a>
+          <a routerLink="/php" routerLinkActive="active">PHP básico</a>
+          <a routerLink="/incidente" routerLinkActive="active">El incidente</a>
+          <a routerLink="/soluciones" routerLinkActive="active">Soluciones</a>
 
           <div class="nav-explore">
             <button
@@ -37,8 +35,14 @@ interface MenuGroup {
                 @for (group of menuGroups; track group.title) {
                   <div class="mega-group">
                     <span class="mega-title">{{ group.title }}</span>
-                    @for (item of group.items; track item.href) {
-                      <a class="mega-item" role="menuitem" [href]="item.href" (click)="closeAll()">
+                    @for (item of group.items; track item.path) {
+                      <a
+                        class="mega-item"
+                        role="menuitem"
+                        [routerLink]="item.path"
+                        routerLinkActive="mega-item-active"
+                        (click)="closeAll()"
+                      >
                         <span class="mega-icon" aria-hidden="true">{{ item.icon }}</span>
                         <span>
                           <strong>{{ item.label }}</strong>
@@ -53,7 +57,7 @@ interface MenuGroup {
           </div>
         </nav>
 
-        <a class="btn btn-primary btn-sm nav-cta" href="#caso-practico">Caso práctico</a>
+        <a class="btn btn-primary btn-sm nav-cta" routerLink="/caso-practico">Caso práctico</a>
 
         <button
           class="nav-burger"
@@ -71,14 +75,14 @@ interface MenuGroup {
           @for (group of menuGroups; track group.title) {
             <details class="nav-mgroup" [attr.open]="openGroup() === group.title ? '' : null">
               <summary (click)="toggleGroup(group.title, $event)">{{ group.title }}</summary>
-              @for (item of group.items; track item.href) {
-                <a class="nav-mitem" [href]="item.href" (click)="closeAll()">
+              @for (item of group.items; track item.path) {
+                <a class="nav-mitem" [routerLink]="item.path" (click)="closeAll()">
                   <span aria-hidden="true">{{ item.icon }}</span> {{ item.label }}
                 </a>
               }
             </details>
           }
-          <a class="btn btn-primary btn-sm" href="#caso-practico" (click)="closeAll()">Ir al caso práctico</a>
+          <a class="btn btn-primary btn-sm" routerLink="/caso-practico" (click)="closeAll()">Ir al caso práctico</a>
         </div>
       }
     </header>
@@ -92,33 +96,7 @@ export class Nav {
   protected readonly mobileOpen = signal(false);
   protected readonly openGroup = signal<string | null>('Fundamentos');
 
-  protected readonly menuGroups: MenuGroup[] = [
-    {
-      title: 'Fundamentos',
-      items: [
-        { href: '#php', icon: '🐘', label: 'PHP básico', desc: 'Qué es y cómo procesa peticiones' },
-        { href: '#cronologia', icon: '🧵', label: 'Cronología', desc: 'Del hallazgo a la explotación masiva' },
-        { href: '#incidente', icon: '💥', label: 'El incidente', desc: 'Los dos CVE explicados' },
-        { href: '#versiones', icon: '🔢', label: 'Versiones', desc: 'Afectadas y corregidas' },
-      ],
-    },
-    {
-      title: 'Protección',
-      items: [
-        { href: '#soluciones', icon: '🩹', label: 'Soluciones', desc: 'Parches, mitigaciones y WAF' },
-        { href: '#caso-practico', icon: '✅', label: 'Caso práctico', desc: 'Checklist Twinteach (Angular + Laravel)' },
-        { href: '#deteccion', icon: '🕵️', label: 'Detección', desc: '¿Te lo han explotado?' },
-      ],
-    },
-    {
-      title: 'Recursos',
-      items: [
-        { href: '#aspectos', icon: '🧠', label: 'Otros aspectos', desc: 'Lecciones del incidente' },
-        { href: '#faq', icon: '❓', label: 'FAQ', desc: 'Dudas rápidas' },
-        { href: '#conclusiones', icon: '🏁', label: 'Conclusiones', desc: 'Cierre y referencias' },
-      ],
-    },
-  ];
+  protected readonly menuGroups: { title: string; items: TopicInfo[] }[] = topicGroups;
 
   @HostListener('window:scroll')
   onScroll(): void {

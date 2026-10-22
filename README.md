@@ -5,45 +5,42 @@ incidente de seguridad **php2bash** (conocido internacionalmente como **PHP2Shel
 CVE-2026-109618 y CVE-2026-109619, dos vulnerabilidades críticas de ejecución remota de código
 en el motor de PHP parcheadas el 21 de octubre de 2026.
 
-## Contenido del sitio
+## Estructura del sitio
 
-1. **PHP básico** — qué es PHP, cómo procesa una petición y por qué un fallo del motor afecta a todas las apps.
-2. **Cronología** — por qué se descubrió (auditoría asistida por IA), cuándo ocurrió y cómo evolucionó.
-3. **El incidente** — en qué consisten los dos CVE (corrupción por OOM y use-after-free), impacto real.
-4. **Versiones afectadas** — de PHP 5.4 (2012) a 8.5.11; versiones corregidas y ramas sin soporte.
-5. **Soluciones** — parcheo, mitigaciones de emergencia, WAF, endurecimiento y verificación.
-6. **Caso práctico Twinteach (Angular + Laravel)** — checklist interactiva paso a paso con comandos.
-7. **Detección** — cómo saber si alguien explotó la vulnerabilidad y qué hacer si sospechas.
-8. **Otros aspectos, FAQ, conclusiones y referencias**.
+La **página principal** es un resumen con el índice interactivo; cada tema vive en su propia ruta:
+
+| Ruta | Contenido |
+| --- | --- |
+| `/` | Resumen del incidente + índice de contenidos |
+| `/php` | PHP básico: qué es y cómo procesa peticiones |
+| `/cronologia` | Cronología estilo terminal retro (Glitchtype), expandible |
+| `/incidente` | Los dos CVE explicados con pestañas |
+| `/versiones` | Versiones afectadas y corregidas |
+| `/soluciones` | Parches, mitigaciones de emergencia y WAF |
+| `/caso-practico` | Checklist interactiva Twinteach (Angular + Laravel) |
+| `/deteccion` | Detección de explotación y respuesta a incidentes |
+| `/aspectos` | Otros aspectos y lecciones |
+| `/faq` | Preguntas frecuentes |
+| `/conclusiones` | Conclusiones y referencias |
+
+## Interfaz
+
+- **Temas de accesibilidad**: claro, oscuro, alto contraste y modos para protanopia,
+  deuteranopia, tritanopia y acromatopsia (con tramas de patrón, no solo color). Selector
+  persistente en el dock flotante (🎨).
+- **Menús interactivos**: mega-menú «Explorar», menú móvil en acordeón e índice visual en la portada.
+- **Dock flotante**: anillo de progreso de lectura y botón de volver arriba.
+- **Cronología Glitchtype**: componente exclusivo con estética de terminal (VT323, amarillo
+  voltaje, glitch RGB) y eventos desplegables.
 
 ## Desarrollo
 
-Para iniciar el servidor de desarrollo local:
-
 ```bash
 npm install
-ng serve
+ng serve        # http://localhost:4200/
+ng build        # compilación (incluye SSR + prerender de las 11 rutas)
+ng test         # tests unitarios con Vitest
 ```
-
-La aplicación estará disponible en `http://localhost:4200/`. Se recarga automáticamente al
-modificar los archivos fuente.
-
-## Compilación
-
-```bash
-ng build
-```
-
-Los artefactos de compilación se generan en el directorio `dist/`. El proyecto incluye soporte
-SSR (renderizado en servidor) con `@angular/ssr`.
-
-## Tests
-
-```bash
-ng test
-```
-
-Ejecuta las pruebas unitarias con [Vitest](https://vitest.dev/).
 
 ## Nota
 

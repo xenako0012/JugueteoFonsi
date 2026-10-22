@@ -17,6 +17,13 @@ export class RevealDirective implements OnInit, OnDestroy {
     const node = this.el.nativeElement;
     node.classList.add('reveal');
 
+    // Fallback: si el navegador no soporta IntersectionObserver, el contenido
+    // nunca debe quedarse oculto.
+    if (typeof IntersectionObserver === 'undefined') {
+      node.classList.add('in-view');
+      return;
+    }
+
     this.observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
+  imports: [RouterLink],
   template: `
     <section class="hero" id="top">
       <div class="blob blob-violet hero-blob-1" aria-hidden="true"></div>
@@ -32,12 +34,12 @@ import { Component } from '@angular/core';
 
           <div class="hero-actions-wrap">
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#incidente">Entender el incidente</a>
-              <a class="btn btn-ghost" href="#soluciones">Cómo proteger mi sistema</a>
+              <a class="btn btn-primary" routerLink="/incidente">Entender el incidente</a>
+              <a class="btn btn-ghost" routerLink="/soluciones">Cómo proteger mi sistema</a>
             </div>
             <p class="annotation hero-annotation">
-              <span class="hand-arrow">↳</span> y si vas directo al grano, la checklist del caso práctico está en
-              el menú
+              <span class="hand-arrow">↳</span> y si vas directo al grano, la checklist del caso práctico tiene
+              su propia página
             </p>
           </div>
 

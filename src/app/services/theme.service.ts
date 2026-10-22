@@ -75,14 +75,20 @@ export class ThemeService {
 
   constructor() {
     if (!isPlatformBrowser(this.platformId)) return;
-    const saved = localStorage.getItem(STORAGE_KEY) as ThemeId | null;
-    if (saved && THEMES.some((t) => t.id === saved)) {
-      this.current.set(saved);
-    } else if (
-      typeof window.matchMedia === 'function' &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      this.current.set('oscuro');
+    // Acceso defensivo: algunos entornos (iframes con sandbox) pueden
+    // lanzar SecurityError y no deben tumbar el arranque de la aplicación.
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY) as ThemeId | null;
+      if (saved && THEMES.some((t) => t.id === saved)) {
+        this.current.set(saved);
+      } else if (
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        this.current.set('oscuro');
+      }
+    } catch {
+      /* sin almacenamiento: tema por defecto */
     }
     this.apply(this.current());
   }
@@ -90,7 +96,11 @@ export class ThemeService {
   set(id: ThemeId): void {
     this.current.set(id);
     if (!isPlatformBrowser(this.platformId)) return;
-    localStorage.setItem(STORAGE_KEY, id);
+    try {
+      localStorage.setItem(STORAGE_KEY, id);
+    } catch {
+      /* sin almacenamiento: el tema dura solo esta visita */
+    }
     this.apply(id);
   }
 

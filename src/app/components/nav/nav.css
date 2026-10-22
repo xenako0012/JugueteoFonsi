@@ -78,6 +78,10 @@
   background: var(--primary-softer);
   text-decoration: none;
 }
+.nav-links > a.active {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
 
 .nav-caret {
   transition: transform 0.2s ease;
@@ -137,7 +141,8 @@
   color: var(--ink-2);
   transition: background 0.15s ease, transform 0.15s ease;
 }
-.mega-item:hover {
+.mega-item:hover,
+.mega-item-active {
   background: var(--primary-softer);
   text-decoration: none;
   transform: translateX(3px);
