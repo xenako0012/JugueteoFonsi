@@ -1,11 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>JugueteoFonsi</title>
+  <title>php2bash / PHP2Shell — Análisis del incidente de seguridad en PHP</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explicación clara y ordenada del incidente php2bash (PHP2Shell): qué es, por qué se descubrió, versiones afectadas, soluciones y cómo comprobar que un stack Angular + Laravel está protegido.">
+  <meta name="theme-color" content="#5b4ee0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // Aplica el tema guardado antes del primer pintado (evita parpadeos).
+    (function () {
+      try {
+        var t = localStorage.getItem('p2b-theme');
+        if (t) {
+          document.documentElement.dataset.theme = t;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.dataset.theme = 'oscuro';
+        }
+      } catch (e) { /* sin localStorage: tema por defecto */ }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
