@@ -894,3 +894,57 @@ summary:focus-visible {
   letter-spacing: 0.12em;
   color: color-mix(in srgb, var(--primary) 62%, var(--ink));
 }
+
+/* ── Acceso rápido al contenido (teclado) ── */
+.skip-link {
+  position: fixed;
+  top: -52px;
+  left: 16px;
+  z-index: 300;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ── Impresión: la práctica en papel se lee limpia ── */
+@media print {
+  app-nav,
+  app-scroll-dock,
+  app-cursor-follower,
+  .skip-link,
+  .home-actions,
+  .gi-actions,
+  .nf-actions,
+  .mr-panel,
+  .mr-hint,
+  .tl-toolbar,
+  .tl-btn,
+  .topic-nav,
+  .topic-back {
+    display: none !important;
+  }
+  .card,
+  .home-cta-box,
+  .pb-img {
+    box-shadow: none !important;
+  }
+  .card {
+    border: 1px solid #555;
+    break-inside: avoid;
+  }
+  .section {
+    padding: 12px 0;
+  }
+  .mr-stage {
+    border: 1px solid #555;
+  }
+}
