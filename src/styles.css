@@ -493,8 +493,10 @@ summary:focus-visible {
   align-items: center;
   gap: 6px;
   background: var(--voltage);
-  color: var(--ink);
-  border: 2px solid var(--ink);
+  /* Tinta fija de pegatina: siempre oscura sobre el amarillo del tema,
+     sea cual sea el tema activo (en oscuro --ink es claro y no leía). */
+  color: #211b14;
+  border: 2px solid #211b14;
   border-radius: 8px;
   padding: 5px 12px;
   font-family: var(--mono);
@@ -502,10 +504,8 @@ summary:focus-visible {
   font-weight: 600;
   letter-spacing: 0.02em;
   transform: rotate(-1.6deg);
-  box-shadow: 3px 3px 0 var(--ink);
+  box-shadow: 3px 3px 0 #211b14;
 }
-[data-theme='alto-contraste'] .sticker,
-[data-theme='acromatopsia'] .sticker { color: var(--bg); }
 
 /* Onda dibujada a mano. */
 .squiggle {
@@ -885,10 +885,12 @@ summary:focus-visible {
   .card { padding: 22px; }
 }
 
-/* Huella de gato tipográfica: gatitos ASCII, sin emojis */
+/* Huella de gato tipográfica: gatitos ASCII, sin emojis.
+   El color se mezcla con la tinta del tema para conservar el acento
+   con contraste suficiente en los 7 temas. */
 .cat-mark {
   font-family: var(--mono);
   font-size: 0.82rem;
   letter-spacing: 0.12em;
-  color: var(--primary);
+  color: color-mix(in srgb, var(--primary) 62%, var(--ink));
 }
