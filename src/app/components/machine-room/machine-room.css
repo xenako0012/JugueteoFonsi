@@ -238,10 +238,12 @@
 
 .mr-code-box {
   margin-top: 22px;
-  border: 1.5px solid var(--ink);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 35%, transparent);
   border-radius: 12px;
   overflow: hidden;
-  background: var(--ink);
+  /* Terminal estable: mismos colores en todos los temas (en oscuro se
+     invertía a una caja crema enorme que restaba). */
+  background: #20273a;
 }
 
 .mr-code-bar {
@@ -249,25 +251,25 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  border-bottom: 1px solid color-mix(in srgb, var(--paper) 24%, transparent);
+  background: #2a3352;
+  border-bottom: 1px solid rgba(242, 234, 217, 0.18);
 }
 
 .mr-code-title {
   font-family: var(--mono);
   font-size: 0.75rem;
   letter-spacing: 0.16em;
-  color: var(--paper);
-  opacity: 0.75;
+  color: rgba(242, 234, 217, 0.75);
 }
 
 .mr-copy {
   padding: 4px 10px;
   font-size: 0.78rem;
-  color: var(--paper);
-  border-color: color-mix(in srgb, var(--paper) 45%, transparent);
+  color: #f2ead9;
+  border-color: rgba(242, 234, 217, 0.45);
 }
 .mr-copy:hover {
-  background: color-mix(in srgb, var(--paper) 16%, transparent);
+  background: rgba(242, 234, 217, 0.16);
 }
 
 .mr-code {
@@ -276,7 +278,7 @@
   font-family: var(--mono);
   font-size: 0.82rem;
   line-height: 1.65;
-  color: var(--paper);
+  color: #f2ead9;
   overflow-x: auto;
   white-space: pre;
 }

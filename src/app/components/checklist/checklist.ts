@@ -36,18 +36,22 @@ import { RevealDirective } from '../../shared/reveal.directive';
         <div class="ck-list">
           @for (step of steps; track step.id; let i = $index) {
             <article class="card ck-item" [class.ck-item-done]="isDone(step.id)" appReveal [attr.data-delay]="i % 3">
-              <button
-                type="button"
-                class="ck-check"
-                [class.checked]="isDone(step.id)"
-                (click)="toggle(step.id)"
-                [attr.aria-pressed]="isDone(step.id)"
-                [attr.aria-label]="'Marcar paso: ' + step.title"
-              >
-                @if (isDone(step.id)) {
-                  <span>✓</span>
-                }
-              </button>
+              <label class="ck-ninja">
+                <input
+                  type="checkbox"
+                  class="ck-ninja-input"
+                  [checked]="isDone(step.id)"
+                  (change)="toggle(step.id)"
+                  [attr.aria-label]="'Marcar paso: ' + step.title"
+                />
+                <div class="ninja-container">
+                  <div class="blade" style="--i: 1"></div>
+                  <div class="blade" style="--i: 2"></div>
+                  <div class="blade" style="--i: 3"></div>
+                  <div class="blade" style="--i: 4"></div>
+                  <div class="core"></div>
+                </div>
+              </label>
               <div class="ck-body">
                 <div class="ck-title">
                   <span class="ck-icon">{{ step.icon }}</span>

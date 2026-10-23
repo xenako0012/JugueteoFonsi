@@ -76,27 +76,28 @@
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--ink);
+  /* Misma tinta fija de pegatina: legible sobre el amarillo en todos los temas */
+  color: #211b14;
   background: var(--voltage);
-  border: 2px solid var(--ink);
+  border: 2px solid #211b14;
   border-radius: 8px;
   padding: 7px 14px;
   cursor: pointer;
-  box-shadow: 3px 3px 0 var(--ink);
+  box-shadow: 3px 3px 0 #211b14;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .tl-btn:hover {
   transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: 4px 4px 0 #211b14;
 }
 .tl-btn:active {
   transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--ink);
+  box-shadow: 1px 1px 0 #211b14;
 }
 .tl-btn-sm {
   padding: 5px 11px;
   font-size: 0.72rem;
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: 2px 2px 0 #211b14;
 }
 
 /* --- lista de eventos (log) --- */
