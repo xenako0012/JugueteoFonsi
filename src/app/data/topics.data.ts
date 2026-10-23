@@ -6,6 +6,7 @@ export type TopicKind =
   | 'incidente'
   | 'versiones'
   | 'soluciones'
+  | 'comprobador'
   | 'caso-practico'
   | 'deteccion'
   | 'aspectos'
@@ -87,6 +88,19 @@ export const topics: TopicInfo[] = [
     chip: '¿Qué soluciones existen?',
     chipKind: 'ok',
     lede: 'Actualizar PHP es la única solución definitiva; el resto son capas que compran tiempo y reducen el riesgo.',
+    group: 'Protección',
+  },
+  {
+    path: '/comprobador',
+    kind: 'comprobador',
+    label: 'Comprobador',
+    icon: '⚖',
+    desc: 'Diagnostica tu stack en 5 preguntas',
+    chip: 'Diagnóstico express',
+    chipKind: 'warn',
+    lede:
+      'Un formulario que calcula, en tu propio navegador, el riesgo de php2bash en tu servidor y te ' +
+      'dice qué hacer a continuación.',
     group: 'Protección',
   },
   {
