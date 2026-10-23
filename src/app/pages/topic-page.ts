@@ -9,6 +9,7 @@ import { Timeline } from '../components/timeline/timeline';
 import { IncidentDetail } from '../components/incident-detail/incident-detail';
 import { Versions } from '../components/versions/versions';
 import { Solutions } from '../components/solutions/solutions';
+import { Comprobador } from '../components/comprobador/comprobador';
 import { Checklist } from '../components/checklist/checklist';
 import { Detection } from '../components/detection/detection';
 import { Lessons } from '../components/lessons/lessons';
@@ -30,6 +31,7 @@ import { Closing } from '../components/closing/closing';
     IncidentDetail,
     Versions,
     Solutions,
+    Comprobador,
     Checklist,
     Detection,
     Lessons,
@@ -63,6 +65,7 @@ import { Closing } from '../components/closing/closing';
       @case ('incidente') { <app-incident-detail /> }
       @case ('versiones') { <app-versions /> }
       @case ('soluciones') { <app-solutions /> }
+      @case ('comprobador') { <app-comprobador /> }
       @case ('caso-practico') { <app-checklist /> }
       @case ('deteccion') { <app-detection /> }
       @case ('aspectos') { <app-lessons /> }
