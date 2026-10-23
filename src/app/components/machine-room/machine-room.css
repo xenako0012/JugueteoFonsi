@@ -1,0 +1,292 @@
+/* ── Animaciones del servidor (parametrizadas con variables CSS) ── */
+
+#float_server {
+  animation: floatAndBounce var(--float-speed, 4s) infinite ease-in-out;
+}
+
+.estrobo_animation {
+  animation:
+    floatAndBounce var(--float-speed, 4s) infinite ease-in-out,
+    strobe var(--strobe-speed, 0.8s) infinite;
+}
+
+.estrobo_animationV2 {
+  animation:
+    floatAndBounce var(--float-speed, 4s) infinite ease-in-out,
+    strobev2 var(--strobe-speed, 0.8s) infinite;
+}
+
+/* El cable de datos: la animación se apila con la flotación */
+#float_server.after_animation {
+  animation:
+    floatAndBounce var(--float-speed, 4s) infinite ease-in-out,
+    dashFlow calc(var(--strobe-speed, 0.8s) * 1.6) linear infinite;
+}
+
+@keyframes floatAndBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--bounce-h, -20px));
+  }
+}
+
+@keyframes strobe {
+  0%,
+  50%,
+  100% {
+    fill: var(--led-on, #17e300);
+  }
+  25%,
+  75% {
+    fill: color-mix(in srgb, var(--led-on, #17e300) 70%, transparent);
+  }
+}
+
+@keyframes strobev2 {
+  0%,
+  50%,
+  100% {
+    fill: var(--led-hot, rgb(255, 95, 74));
+  }
+  25%,
+  75% {
+    fill: rgb(255, 208, 1);
+  }
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -34;
+  }
+}
+
+/* Animación de los colores del gradiente de las paredes */
+@keyframes animateGradient {
+  0% {
+    stop-color: #19180f;
+  }
+  50% {
+    stop-color: #ffdd00;
+  }
+  100% {
+    stop-color: #e71a1a;
+  }
+}
+
+#paint13_linear_163_1030 stop {
+  animation: animateGradient var(--float-speed, 4s) infinite alternate;
+}
+
+/* ── Modos: parcheado / explotación / pausa ── */
+
+.mr-ataque .estrobo_animation {
+  animation-name: floatAndBounce, strobev2;
+}
+.mr-ataque #paint13_linear_163_1030 stop {
+  animation-duration: calc(var(--float-speed, 4s) / 3);
+}
+
+.mr-paused .mr-svg * {
+  animation-play-state: paused;
+}
+
+@keyframes mrShake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-3px, 1px) rotate(-0.4deg);
+  }
+  50% {
+    transform: translate(3px, -1px) rotate(0.4deg);
+  }
+  75% {
+    transform: translate(-2px, 2px);
+  }
+}
+.mr-shake .mr-svg {
+  animation: mrShake 0.45s ease-in-out;
+}
+
+/* ── Escenario y panel ── */
+
+.mr-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.mr-stage {
+  padding: 18px;
+}
+
+.mr-stage-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px 12px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+.mr-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--led-on, #17e300);
+  box-shadow: 0 0 8px var(--led-on, #17e300);
+}
+.mr-ataque .mr-led {
+  background: var(--led-hot, #ff5f4a);
+  box-shadow: 0 0 8px var(--led-hot, #ff5f4a);
+}
+
+.mr-stage-name {
+  color: var(--muted);
+  flex: 1;
+}
+
+.mr-svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.mr-hint {
+  margin: 14px 4px 0;
+}
+
+.mr-panel {
+  padding: clamp(18px, 2.5vw, 26px);
+}
+
+.mr-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.mr-panel-head h3 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.mr-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.mr-mode-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.mr-ctl {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.mr-ctl-name {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.mr-ctl-name b {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.mr-ctl input[type='range'] {
+  width: 100%;
+  accent-color: var(--primary);
+  cursor: grab;
+}
+.mr-ctl input[type='range']:active {
+  cursor: grabbing;
+}
+
+.mr-colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.mr-ctl-color input[type='color'] {
+  width: 100%;
+  height: 36px;
+  padding: 2px;
+  border: 1.5px solid var(--ink-soft);
+  border-radius: 10px;
+  background: var(--paper-2);
+  cursor: pointer;
+}
+
+.mr-code-box {
+  margin-top: 22px;
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.mr-code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--paper) 24%, transparent);
+}
+
+.mr-code-title {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: var(--paper);
+  opacity: 0.75;
+}
+
+.mr-copy {
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  color: var(--paper);
+  border-color: color-mix(in srgb, var(--paper) 45%, transparent);
+}
+.mr-copy:hover {
+  background: color-mix(in srgb, var(--paper) 16%, transparent);
+}
+
+.mr-code {
+  margin: 0;
+  padding: 14px 16px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--paper);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.mr-panel-note {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 1024px) {
+  .mr-grid {
+    grid-template-columns: 1fr;
+  }
+}

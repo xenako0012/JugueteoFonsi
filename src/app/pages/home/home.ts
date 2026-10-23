@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Hero } from '../../components/hero/hero';
 import { GuideIntro } from '../../components/guide-intro/guide-intro';
 import { Protagonists } from '../../components/protagonists/protagonists';
+import { MachineRoom } from '../../components/machine-room/machine-room';
 import { Squiggle } from '../../shared/squiggle';
 import { RevealDirective } from '../../shared/reveal.directive';
 import { topicGroups, TopicInfo } from '../../data/topics.data';
@@ -13,7 +14,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
  */
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, Hero, GuideIntro, Protagonists, Squiggle, RevealDirective],
+  imports: [RouterLink, Hero, GuideIntro, Protagonists, MachineRoom, Squiggle, RevealDirective],
   template: `
     <app-hero />
     <app-guide-intro />
@@ -44,6 +45,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
 
     <app-squiggle [width]="220" />
     <app-protagonists />
+    <app-machine-room />
 
     <!-- menú visual de contenidos -->
     <section class="section home-menu">
