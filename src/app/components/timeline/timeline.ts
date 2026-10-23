@@ -66,7 +66,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
                     </button>
                   </header>
 
-                  <h3 class="glitch-text" [attr.data-text]="event.title">{{ event.title }}</h3>
+                  <h3>{{ event.title }}</h3>
                   <p class="tl-short">{{ event.short }}</p>
 
                   @if (isOpen(i)) {
