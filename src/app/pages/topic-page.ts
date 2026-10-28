@@ -14,6 +14,7 @@ import { Checklist } from '../components/checklist/checklist';
 import { Detection } from '../components/detection/detection';
 import { Lessons } from '../components/lessons/lessons';
 import { Faq } from '../components/faq/faq';
+import { Bibliography } from '../components/bibliography/bibliography';
 import { Closing } from '../components/closing/closing';
 
 /**
@@ -36,6 +37,7 @@ import { Closing } from '../components/closing/closing';
     Detection,
     Lessons,
     Faq,
+    Bibliography,
     Closing,
   ],
   template: `
@@ -70,6 +72,7 @@ import { Closing } from '../components/closing/closing';
       @case ('deteccion') { <app-detection /> }
       @case ('aspectos') { <app-lessons /> }
       @case ('faq') { <app-faq /> }
+      @case ('bibliografia') { <app-bibliography /> }
       @case ('conclusiones') { <app-closing /> }
     }
 
