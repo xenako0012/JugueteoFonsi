@@ -4,6 +4,7 @@ import { Hero } from '../../components/hero/hero';
 import { GuideIntro } from '../../components/guide-intro/guide-intro';
 import { Protagonists } from '../../components/protagonists/protagonists';
 import { MachineRoom } from '../../components/machine-room/machine-room';
+import { TechRadio } from '../../components/tech-radio/tech-radio';
 import { Squiggle } from '../../shared/squiggle';
 import { RevealDirective } from '../../shared/reveal.directive';
 import { topicGroups, TopicInfo } from '../../data/topics.data';
@@ -14,7 +15,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
  */
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, Hero, GuideIntro, Protagonists, MachineRoom, Squiggle, RevealDirective],
+  imports: [RouterLink, Hero, GuideIntro, Protagonists, MachineRoom, TechRadio, Squiggle, RevealDirective],
   template: `
     <app-hero />
     <app-guide-intro />
@@ -43,6 +44,7 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
     <app-squiggle [width]="220" />
     <app-protagonists />
     <app-machine-room />
+    <app-tech-radio />
 
     <!-- menú visual de contenidos -->
     <section class="section home-menu">

@@ -1,0 +1,80 @@
+<section class="section tr-zone">
+  <div class="container">
+    <div class="tr-grid">
+      <div class="tr-copy">
+        <div class="section-head" appReveal>
+          <span class="chip chip-primary"><span class="dot"></span>Zona técnica</span>
+          <h2>El rack de <span class="grad-text">modos de servidor</span></h2>
+          <p class="lede">
+            Tiene forma de reproductor retro, pero en versión técnico: cada «pista» es un modo de
+            ejecución de PHP y la ficha cuenta qué supone frente a php2bash.
+          </p>
+        </div>
+
+        <p appReveal>
+          Elige una estación y mira el LED, el ecualizador y la ficha de abajo: cada modo de servidor
+          expone una superficie de ataque distinta, y eso se nota cuando llega una vulnerabilidad
+          como la de octubre de 2026.
+        </p>
+
+        <p class="annotation" appReveal>
+          <span class="hand-arrow">↳</span> si quieres ver todas las versiones y SAPI afectados,
+          están en la página de <a routerLink="/versiones">versiones</a>.
+        </p>
+
+        <p class="cat-mark">=^..^= Kuro solo transmite en la estación parcheada</p>
+      </div>
+
+      <div class="tr-widget" appReveal data-delay="1">
+        <div class="winamp-player-container">
+          <div class="player-header">
+            <div class="header-bars"></div>
+            <span class="header-title">PREFERENCES // SERVER_MODE</span>
+          </div>
+
+          <div class="radio-stack" role="radiogroup" aria-label="Modo de servidor">
+            @for (m of modes; track m.title; let i = $index) {
+              <label class="track-select">
+                <input
+                  type="radio"
+                  name="winamp-mode"
+                  [checked]="i === selected()"
+                  (change)="pick(i)"
+                />
+                <div class="led-indicator">
+                  <div class="led-glass"></div>
+                  <div class="led-light"></div>
+                  <div class="led-reflection"></div>
+                </div>
+                <div class="track-info">
+                  <span class="track-title">{{ m.title }}</span>
+                  <span class="track-kbps">{{ m.sub }}</span>
+                </div>
+                <div class="equalizer-mini">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </label>
+            }
+          </div>
+
+          <div class="wr-readout" aria-live="polite">
+            <div class="wr-readout-head">
+              <span class="wr-readout-label">FICHA // MODO_ACTIVO</span>
+              <span [class]="'chip chip-' + mode().chipKind">
+                <span class="dot"></span>{{ mode().chipLabel }}
+              </span>
+            </div>
+            @for (line of mode().lines; track line) {
+              <p class="wr-line">{{ line }}</p>
+            }
+            <code class="wr-cmd">{{ mode().cmd }}</code>
+          </div>
+
+          <div class="screen-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

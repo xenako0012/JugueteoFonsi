@@ -27,15 +27,15 @@ La portada es un **resumen** con índice interactivo; cada tema se despliega a s
 
 | Ruta | Página | Qué contiene |
 |---|---|---|
-| `/` | Portada | Hero, resumen en 30 segundos, guía (Bit y Kuro), protagonistas, sala de máquinas, índice y CTA |
+| `/` | Portada | Hero, resumen en 30 segundos, guía (Bit y Kuro), protagonistas, sala de máquinas, zona técnica (rack de modos) índice y CTA |
 | `/php` | Fundamentos de PHP | Qué es PHP, cómo ejecuta código, SAPI (mod_php/FPM/CGI), sesiones y `session.upload_progress` |
 | `/cronologia` | Cronología | Componente Glitchtype con el timeline desplegable del incidente (julio → octubre 2026) |
-| `/incidente` | El incidente | Qué falló exactamente, el flujo de ataque, el coste y la velocidad |
+| `/incidente` | El incidente | Qué falló exactamente, el **flujo del ataque animado** paso a paso, el coste y la velocidad |
 | `/versiones` | Versiones | Quién estaba afectado (5.4.0–8.5.11), versiones corregidas y comparación de SAPI |
 | `/soluciones` | Soluciones | Parches oficiales, mitigaciones de emergencia y WAF con virtual patching |
 | `/comprobador` | Comprobador | **Formulario de diagnóstico** en 5 preguntas con veredicto en vivo (☠ ⚑ ✓) |
 | `/caso-practico` | Caso práctico | **Checklist Twinteach** (Angular + Laravel): 8 pasos con comandos copiables y progreso guardado |
-| `/deteccion` | Detección | Cómo saber si te han explotado: logs, sistema, aplicación y respuesta a incidentes |
+| `/deteccion` | Detección | Cómo saber si te han explotado: logs, sistema, aplicación y respuesta a incidentes — con **consola interactiva** para practicar los comandos |
 | `/aspectos` | Otros aspectos | El papel de la IA en el descubrimiento, divulgación coordinada, defensa en profundidad |
 | `/faq` | FAQ | Dudas frecuentes en formato pregunta/respuesta |
 | `/bibliografia` | Bibliografía | **De dónde sale cada dato**: fuentes anotadas (incidente, fondos técnicos, diseño) |
@@ -124,6 +124,9 @@ Los temas cambian variables CSS (`--paper`, `--ink`, `--primary`, `--voltage`…
 | **Checklist ninja** | `/caso-practico` | Marcadores con aspas giratorias y núcleo estelar pulsante; progreso (contador, %, persistencia) y reinicio |
 | **Comprobador** | `/comprobador` | Formulario de 5 preguntas → veredicto en vivo (riesgo alto / mitigado / protegido) con pasos recomendados |
 | **Sala de máquinas** | Portada | Servidor SVG isométrico flotante con sliders que escriben **CSS en vivo** (`--bounce-h`, `--float-speed`, LED…), modos parcheado/explotación y copia del código generado |
+| **Rack de modos (zona técnica)** | Portada | Reproductor retro estilo Winamp donde cada «pista» es un modo de servidor (FPM, mod_php, CGI/LiteSpeed): LED, ecualizador y ficha técnica reaccionan a la estación elegida |
+| **Flujo del ataque** | `/incidente` | Recorrido animado del exploit en 5 fases con reproducción/pausa, avance manual y ficha técnica (trace mono + chip de riesgo) por fase |
+| **Consola de detección** | `/deteccion` | Terminal interactiva `~$`: escribe comandos reales de revisión (`php -v`, `ps aux`, `grep`…) y juega con las respuestas y las pistas de interpretación |
 | **Perseguidor del ratón** | Global | Arcos orbitantes que persiguen el cursor (colores del tema activo; desactivado en táctil y con `prefers-reduced-motion`) |
 | **Cronología Glitchtype** | `/cronologia` | Timeline de consola con eventos desplegables, filtros y botón «abrir ficha» |
 | **Bloques de código** | Varios | Comandos con botón de copiar |
@@ -201,10 +204,15 @@ npm run build      # build de producción con prerender (dist/)
 9. **PHP.net — manual y avisos oficiales** — [php.net](https://www.php.net/) — fundamentos del lenguaje, `session.upload_progress`, SAPI y notas de las versiones corregidas.
 10. **GitHub Advisories** — [GHSA-w8hw-w9fx-j79w](https://github.com/advisories/GHSA-w8hw-w9fx-j79w) · GHSA-6wmf-4rv5-p3rp — fichas oficiales de las dos CVE.
 
-### Recursos de diseño
+### Recursos de diseño (inspiraciones sueltas de Uiverse.io)
 
-11. **Uiverse — kit «Glitchtype»** — [uiverse.io](https://uiverse.io/ui-kits/bad-dolphin-14-186e4d54) — referencia de estilo de la cronología.
-12. **Piliapp — símbolos** — [es.piliapp.com/symbol](https://es.piliapp.com/symbol/) — inventario de símbolos tipográficos del sitio.
+11. **Uiverse — kit «Glitchtype»** — [uiverse.io](https://uiverse.io/ui-kits/bad-dolphin-14-186e4d54) — estilo de la cronología (terminal retro, papel crema, amarillo voltaje).
+12. **Uiverse — «Radio» de adamgiebl** — [uiverse.io](https://uiverse.io/adamgiebl/hard-vampirebat-36) — radios skeuomórficos con neón → rack de modos de la zona técnica.
+13. **Uiverse — «Checkbox estrella» de andrew-demchenk0** — [uiverse.io](https://uiverse.io/andrew-demchenk0/light-lionfish-40) — estrella que se enciende al marcar → marcadores ninja de la checklist.
+14. **Uiverse — «Radio glitch» de andrew-demchenk0** — [uiverse.io](https://uiverse.io/andrew-demchenk0/pink-dragon-17) — ambiente glitch/ciber → acentos con aberración.
+15. **Uiverse — «Ninja loader» de JaydipPrajapati1910** — [uiverse.io](https://uiverse.io/JaydipPrajapati1910/spicy-eel-83) — estrellas ninja giratorias → aire ninja de los marcadores.
+16. **Uiverse — «Loader neón» de mrhyddenn** — [uiverse.io](https://uiverse.io/mrhyddenn/average-dodo-53) — anillo neón en órbita → perseguidor del ratón.
+17. **Piliapp — símbolos** — [es.piliapp.com/symbol](https://es.piliapp.com/symbol/) — inventario de símbolos tipográficos del sitio.
 
 > La misma bibliografía, anotada, está en la web: **`/bibliografia`** (apartado de Recursos).
 

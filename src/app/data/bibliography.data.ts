@@ -107,7 +107,10 @@ export const bibliography: BiblioGroup[] = [
   {
     kind: 'Diseño',
     title: 'Recursos visuales',
-    lede: 'De dónde sale la estética del sitio (el contenido informático es propio del proyecto).',
+    lede:
+      'De dónde sale la estética del sitio (el contenido informático es propio del proyecto). ' +
+      'La mayor parte son inspiraciones sueltas de Uiverse.io: piezas independientes que fijaron ' +
+      'el estilo de cada componente.',
     entries: [
       {
         label: 'Uiverse — kit «Glitchtype»',
@@ -115,6 +118,41 @@ export const bibliography: BiblioGroup[] = [
         note:
           'Referencia de estilo de la cronología: terminal retro, papel crema, líneas de tinta ' +
           'y amarillo voltaje con aberración RGB.',
+      },
+      {
+        label: 'Uiverse — «Radio» de adamgiebl',
+        url: 'https://uiverse.io/adamgiebl/hard-vampirebat-36',
+        note:
+          'Radios skeuomórficos con neón: la inspiración directa del rack de modos de la zona ' +
+          'técnica (pilotos, botones con relieve y selección por estación).',
+      },
+      {
+        label: 'Uiverse — «Checkbox estrella» de andrew-demchenk0',
+        url: 'https://uiverse.io/andrew-demchenk0/light-lionfish-40',
+        note:
+          'Checkbox con estrella que se enciende al marcarlo: el germen de los marcadores ninja ' +
+          'de la checklist de Twinteach (estrella central, animación al activar).',
+      },
+      {
+        label: 'Uiverse — «Radio glitch» de andrew-demchenk0',
+        url: 'https://uiverse.io/andrew-demchenk0/pink-dragon-17',
+        note:
+          'Botones ciber con efecto glitch por capas: referencia del ambiente «pantalla rota» ' +
+          'de la cronología y de los acentos con aberración.',
+      },
+      {
+        label: 'Uiverse — «Ninja loader» de JaydipPrajapati1910',
+        url: 'https://uiverse.io/JaydipPrajapati1910/spicy-eel-83',
+        note:
+          'Cargador de estrellas ninja giratorias: de aquí sale el aire «ninja» del checkbox de ' +
+          'la checklist y sus aspas en rotación.',
+      },
+      {
+        label: 'Uiverse — «Loader neón» de mrhyddenn',
+        url: 'https://uiverse.io/mrhyddenn/average-dodo-53',
+        note:
+          'Anillo neón en órbita: la referencia del perseguidor del ratón (arcos girando alrededor ' +
+          'de un núcleo luminoso).',
       },
       {
         label: 'Piliapp — inventario de símbolos',
