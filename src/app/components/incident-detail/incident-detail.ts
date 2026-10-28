@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { AttackFlow } from '../attack-flow/attack-flow';
 import { CodeBlock } from '../../shared/code-block';
 import { RevealDirective } from '../../shared/reveal.directive';
 
@@ -16,7 +17,7 @@ interface CveTab {
 
 @Component({
   selector: 'app-incident-detail',
-  imports: [CodeBlock, RevealDirective],
+  imports: [AttackFlow, CodeBlock, RevealDirective],
   template: `
     <section class="section section-wash-alt" id="incidente">
       <div class="container">
@@ -32,19 +33,8 @@ interface CveTab {
           </p>
         </div>
 
-        <!-- ataque paso a paso -->
-        <div class="attack-flow" appReveal>
-          @for (step of attackSteps; track step.label; let last = $last) {
-            <div class="attack-step">
-              <span class="attack-icon">{{ step.icon }}</span>
-              <strong>{{ step.label }}</strong>
-              <span>{{ step.detail }}</span>
-            </div>
-            @if (!last) {
-              <div class="attack-arrow">➜</div>
-            }
-          }
-        </div>
+        <!-- ataque paso a paso (animado) -->
+        <app-attack-flow />
 
         <!-- pestañas de los dos CVE -->
         <div class="cve-panel" appReveal>
@@ -144,14 +134,6 @@ interface CveTab {
 })
 export class IncidentDetail {
   protected readonly activeTab = signal('cve1');
-
-  protected readonly attackSteps = [
-    { icon: '01', label: 'Petición manipulada', detail: 'HTTP multipart diseñada' },
-    { icon: '02', label: 'Estado corrupto', detail: 'memoria a medio liberar' },
-    { icon: '03', label: 'use-after-free', detail: 'el motor lo reutiliza' },
-    { icon: '04', label: 'Código arbitrario', detail: 'comandos del atacante' },
-    { icon: '05', label: 'Shell remota', detail: 'control del servidor' },
-  ];
 
   protected readonly tabs: CveTab[] = [
     {

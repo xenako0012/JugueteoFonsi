@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { iocs } from '../../data/incident.data';
 import { CodeBlock } from '../../shared/code-block';
+import { Console } from '../console/console';
 import { RevealDirective } from '../../shared/reveal.directive';
 
 @Component({
   selector: 'app-detection',
-  imports: [CodeBlock, RevealDirective],
+  imports: [CodeBlock, Console, RevealDirective],
   template: `
     <section class="section section-tint" id="deteccion">
       <div class="container">
@@ -39,6 +40,15 @@ import { RevealDirective } from '../../shared/reveal.directive';
         <div class="det-terminal" appReveal>
           <h3 class="det-title">Comandos de revisión rápida (sobre los logs y el servidor)</h3>
           <app-code-block [code]="huntCommands" />
+        </div>
+
+        <div class="det-terminal" appReveal>
+          <h3 class="det-title">Pon a prueba los comandos</h3>
+          <p class="annotation">
+            <span class="hand-arrow">↳</span> una consola de práctica con respuestas de ejemplo:
+            escribe los comandos de arriba y juega a interpretar lo que aparece.
+          </p>
+          <app-console />
         </div>
 
         <div class="grid grid-2 det-next">

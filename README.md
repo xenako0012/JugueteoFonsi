@@ -30,12 +30,12 @@ La portada es un **resumen** con índice interactivo; cada tema se despliega a s
 | `/` | Portada | Hero, resumen en 30 segundos, guía (Bit y Kuro), protagonistas, sala de máquinas, zona técnica (rack de modos) índice y CTA |
 | `/php` | Fundamentos de PHP | Qué es PHP, cómo ejecuta código, SAPI (mod_php/FPM/CGI), sesiones y `session.upload_progress` |
 | `/cronologia` | Cronología | Componente Glitchtype con el timeline desplegable del incidente (julio → octubre 2026) |
-| `/incidente` | El incidente | Qué falló exactamente, el flujo de ataque, el coste y la velocidad |
+| `/incidente` | El incidente | Qué falló exactamente, el **flujo del ataque animado** paso a paso, el coste y la velocidad |
 | `/versiones` | Versiones | Quién estaba afectado (5.4.0–8.5.11), versiones corregidas y comparación de SAPI |
 | `/soluciones` | Soluciones | Parches oficiales, mitigaciones de emergencia y WAF con virtual patching |
 | `/comprobador` | Comprobador | **Formulario de diagnóstico** en 5 preguntas con veredicto en vivo (☠ ⚑ ✓) |
 | `/caso-practico` | Caso práctico | **Checklist Twinteach** (Angular + Laravel): 8 pasos con comandos copiables y progreso guardado |
-| `/deteccion` | Detección | Cómo saber si te han explotado: logs, sistema, aplicación y respuesta a incidentes |
+| `/deteccion` | Detección | Cómo saber si te han explotado: logs, sistema, aplicación y respuesta a incidentes — con **consola interactiva** para practicar los comandos |
 | `/aspectos` | Otros aspectos | El papel de la IA en el descubrimiento, divulgación coordinada, defensa en profundidad |
 | `/faq` | FAQ | Dudas frecuentes en formato pregunta/respuesta |
 | `/bibliografia` | Bibliografía | **De dónde sale cada dato**: fuentes anotadas (incidente, fondos técnicos, diseño) |
@@ -125,6 +125,8 @@ Los temas cambian variables CSS (`--paper`, `--ink`, `--primary`, `--voltage`…
 | **Comprobador** | `/comprobador` | Formulario de 5 preguntas → veredicto en vivo (riesgo alto / mitigado / protegido) con pasos recomendados |
 | **Sala de máquinas** | Portada | Servidor SVG isométrico flotante con sliders que escriben **CSS en vivo** (`--bounce-h`, `--float-speed`, LED…), modos parcheado/explotación y copia del código generado |
 | **Rack de modos (zona técnica)** | Portada | Reproductor retro estilo Winamp donde cada «pista» es un modo de servidor (FPM, mod_php, CGI/LiteSpeed): LED, ecualizador y ficha técnica reaccionan a la estación elegida |
+| **Flujo del ataque** | `/incidente` | Recorrido animado del exploit en 5 fases con reproducción/pausa, avance manual y ficha técnica (trace mono + chip de riesgo) por fase |
+| **Consola de detección** | `/deteccion` | Terminal interactiva `~$`: escribe comandos reales de revisión (`php -v`, `ps aux`, `grep`…) y juega con las respuestas y las pistas de interpretación |
 | **Perseguidor del ratón** | Global | Arcos orbitantes que persiguen el cursor (colores del tema activo; desactivado en táctil y con `prefers-reduced-motion`) |
 | **Cronología Glitchtype** | `/cronologia` | Timeline de consola con eventos desplegables, filtros y botón «abrir ficha» |
 | **Bloques de código** | Varios | Comandos con botón de copiar |

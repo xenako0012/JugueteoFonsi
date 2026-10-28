@@ -1,0 +1,244 @@
+.af {
+  background: var(--paper-2);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  margin: 26px 0;
+}
+
+.af-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.af-title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.af-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.af-btn {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.af-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.af-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.af-btn-main {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--btn-ink, var(--paper));
+}
+
+.af-btn-main:hover:not(:disabled) {
+  color: var(--btn-ink, var(--paper));
+}
+
+.af-count {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.af-track-wrap {
+  position: relative;
+  padding: 10px 6px 4px;
+}
+
+.af-line {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 34px;
+  border-top: 2px dashed color-mix(in srgb, var(--primary) 36%, transparent);
+  z-index: 0;
+}
+
+.af-packet {
+  position: absolute;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--primary) 22%, transparent);
+  transform: translateX(-50%);
+  transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.af-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.af-track li {
+  flex: 1 1 0;
+  min-width: 118px;
+  display: flex;
+  justify-content: center;
+}
+
+.af-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--muted);
+  width: 100%;
+}
+
+.af-node-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1.5px solid var(--border);
+  background: var(--paper);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.af-node-label {
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.af-node.done .af-node-icon {
+  border-color: color-mix(in srgb, var(--primary) 55%, transparent);
+  color: var(--primary);
+}
+
+.af-node.active .af-node-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--btn-ink, var(--paper));
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+.af-node.active .af-node-label {
+  color: var(--ink);
+}
+
+.af-node:hover .af-node-icon {
+  border-color: var(--primary);
+}
+
+.af-detail {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1.5px solid var(--border);
+  background: var(--paper);
+}
+
+.af-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.af-detail-icon {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-softer);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 32%, transparent);
+  border-radius: 8px;
+  padding: 3px 9px;
+}
+
+.af-detail-label {
+  font-size: 1.05rem;
+}
+
+.af-detail-body {
+  margin: 0 0 12px;
+  color: var(--ink-2);
+  line-height: 1.7;
+  max-width: 78ch;
+}
+
+.af-trace {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  word-break: break-all;
+}
+
+@media (max-width: 680px) {
+  .af {
+    padding: 18px 14px;
+  }
+
+  .af-line,
+  .af-packet {
+    display: none;
+  }
+
+  .af-track {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .af-packet,
+  .af-node-icon,
+  .af-btn {
+    transition: none;
+  }
+}
