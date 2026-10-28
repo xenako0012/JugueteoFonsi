@@ -175,6 +175,17 @@ npm test           # 7 tests (Vitest)
 npm run build      # build de producción con prerender (dist/)
 ```
 
+### Despliegue — GitHub Pages
+
+El sitio se publica automáticamente en **https://xenako0012.github.io/JugueteoFonsi/** con el workflow
+`.github/workflows/deploy-pages.yml`:
+
+- Cada push a `master` (o a una rama `arena/**`) construye con `ng build --base-href /JugueteoFonsi/`
+  y despliega el prerender estático (`dist/JugueteoFonsi/browser`) con `actions/deploy-pages`.
+- `public/404.html` aporta la página de error estática que GitHub Pages sirve para rutas desconocidas.
+- También se puede lanzar a mano desde la pestaña *Actions* (`workflow_dispatch`).
+- Ojo: al construir en local para Pages hay que pasar `--base-href /JugueteoFonsi/` (el dev server usa `/`).
+
 ---
 
 ## 9. Accesibilidad, responsive y rendimiento
