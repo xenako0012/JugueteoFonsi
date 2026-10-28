@@ -27,7 +27,7 @@ La portada es un **resumen** con índice interactivo; cada tema se despliega a s
 
 | Ruta | Página | Qué contiene |
 |---|---|---|
-| `/` | Portada | Hero, resumen en 30 segundos, guía (Bit y Kuro), protagonistas, sala de máquinas, índice y CTA |
+| `/` | Portada | Hero, resumen en 30 segundos, guía (Bit y Kuro), protagonistas, sala de máquinas, zona técnica (rack de modos) índice y CTA |
 | `/php` | Fundamentos de PHP | Qué es PHP, cómo ejecuta código, SAPI (mod_php/FPM/CGI), sesiones y `session.upload_progress` |
 | `/cronologia` | Cronología | Componente Glitchtype con el timeline desplegable del incidente (julio → octubre 2026) |
 | `/incidente` | El incidente | Qué falló exactamente, el flujo de ataque, el coste y la velocidad |
@@ -124,6 +124,7 @@ Los temas cambian variables CSS (`--paper`, `--ink`, `--primary`, `--voltage`…
 | **Checklist ninja** | `/caso-practico` | Marcadores con aspas giratorias y núcleo estelar pulsante; progreso (contador, %, persistencia) y reinicio |
 | **Comprobador** | `/comprobador` | Formulario de 5 preguntas → veredicto en vivo (riesgo alto / mitigado / protegido) con pasos recomendados |
 | **Sala de máquinas** | Portada | Servidor SVG isométrico flotante con sliders que escriben **CSS en vivo** (`--bounce-h`, `--float-speed`, LED…), modos parcheado/explotación y copia del código generado |
+| **Rack de modos (zona técnica)** | Portada | Reproductor retro estilo Winamp donde cada «pista» es un modo de servidor (FPM, mod_php, CGI/LiteSpeed): LED, ecualizador y ficha técnica reaccionan a la estación elegida |
 | **Perseguidor del ratón** | Global | Arcos orbitantes que persiguen el cursor (colores del tema activo; desactivado en táctil y con `prefers-reduced-motion`) |
 | **Cronología Glitchtype** | `/cronologia` | Timeline de consola con eventos desplegables, filtros y botón «abrir ficha» |
 | **Bloques de código** | Varios | Comandos con botón de copiar |
@@ -201,10 +202,15 @@ npm run build      # build de producción con prerender (dist/)
 9. **PHP.net — manual y avisos oficiales** — [php.net](https://www.php.net/) — fundamentos del lenguaje, `session.upload_progress`, SAPI y notas de las versiones corregidas.
 10. **GitHub Advisories** — [GHSA-w8hw-w9fx-j79w](https://github.com/advisories/GHSA-w8hw-w9fx-j79w) · GHSA-6wmf-4rv5-p3rp — fichas oficiales de las dos CVE.
 
-### Recursos de diseño
+### Recursos de diseño (inspiraciones sueltas de Uiverse.io)
 
-11. **Uiverse — kit «Glitchtype»** — [uiverse.io](https://uiverse.io/ui-kits/bad-dolphin-14-186e4d54) — referencia de estilo de la cronología.
-12. **Piliapp — símbolos** — [es.piliapp.com/symbol](https://es.piliapp.com/symbol/) — inventario de símbolos tipográficos del sitio.
+11. **Uiverse — kit «Glitchtype»** — [uiverse.io](https://uiverse.io/ui-kits/bad-dolphin-14-186e4d54) — estilo de la cronología (terminal retro, papel crema, amarillo voltaje).
+12. **Uiverse — «Radio» de adamgiebl** — [uiverse.io](https://uiverse.io/adamgiebl/hard-vampirebat-36) — radios skeuomórficos con neón → rack de modos de la zona técnica.
+13. **Uiverse — «Checkbox estrella» de andrew-demchenk0** — [uiverse.io](https://uiverse.io/andrew-demchenk0/light-lionfish-40) — estrella que se enciende al marcar → marcadores ninja de la checklist.
+14. **Uiverse — «Radio glitch» de andrew-demchenk0** — [uiverse.io](https://uiverse.io/andrew-demchenk0/pink-dragon-17) — ambiente glitch/ciber → acentos con aberración.
+15. **Uiverse — «Ninja loader» de JaydipPrajapati1910** — [uiverse.io](https://uiverse.io/JaydipPrajapati1910/spicy-eel-83) — estrellas ninja giratorias → aire ninja de los marcadores.
+16. **Uiverse — «Loader neón» de mrhyddenn** — [uiverse.io](https://uiverse.io/mrhyddenn/average-dodo-53) — anillo neón en órbita → perseguidor del ratón.
+17. **Piliapp — símbolos** — [es.piliapp.com/symbol](https://es.piliapp.com/symbol/) — inventario de símbolos tipográficos del sitio.
 
 > La misma bibliografía, anotada, está en la web: **`/bibliografia`** (apartado de Recursos).
 
