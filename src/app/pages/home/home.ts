@@ -37,9 +37,6 @@ import { topicGroups, TopicInfo } from '../../data/topics.data';
           <a class="btn btn-primary" routerLink="/php">Empezar por lo básico</a>
           <a class="btn btn-ghost" routerLink="/caso-practico">Ir a la checklist</a>
         </div>
-        <p class="annotation home-annotation" appReveal>
-          <span class="hand-arrow">↳</span> Si quieres ver la historia completa, ve a la cronología o al análisis del incidente.
-        </p>
       </div>
     </section>
 
