@@ -1,0 +1,86 @@
+.bl-group {
+  margin-bottom: 42px;
+}
+
+.bl-group-head h3 {
+  margin: 12px 0 6px;
+  font-size: 1.35rem;
+}
+
+.bl-group-lede {
+  color: var(--muted);
+  max-width: 72ch;
+  margin: 0 0 18px;
+}
+
+.bl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.bl-item {
+  padding: 16px 18px;
+}
+
+.bl-item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.bl-num {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-softer);
+  border: 1.5px solid color-mix(in srgb, var(--primary) 32%, transparent);
+  border-radius: 8px;
+  padding: 2px 8px;
+  flex: 0 0 auto;
+}
+
+.bl-label {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid color-mix(in srgb, var(--primary) 45%, transparent);
+}
+.bl-label:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.bl-ext {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--muted);
+}
+
+.bl-note {
+  margin: 0 0 10px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 82ch;
+}
+
+.bl-url {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  word-break: break-all;
+  display: block;
+}
+
+.bl-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}

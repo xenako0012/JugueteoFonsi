@@ -11,6 +11,7 @@ export type TopicKind =
   | 'deteccion'
   | 'aspectos'
   | 'faq'
+  | 'bibliografia'
   | 'conclusiones';
 
 export interface TopicInfo {
@@ -154,6 +155,19 @@ export const topics: TopicInfo[] = [
     group: 'Recursos',
     banner: 'art/banner-faq.webp',
     bannerAlt: 'Cartel collage «faq»: Kuro, una gatita con gorro bufón rosa, asomando de una caja entre notas, con la insignia «dudas frecuentes»',
+  },
+  {
+    path: '/bibliografia',
+    kind: 'bibliografia',
+    label: 'Bibliografía',
+    icon: '✎',
+    desc: 'De dónde sale cada dato del sitio',
+    chip: 'Fuentes del proyecto',
+    chipKind: 'info',
+    lede:
+      'La bibliografía completa y anotada del sitio: qué aporta cada fuente al contenido, de la ' +
+      'cronología a la estética.',
+    group: 'Recursos',
   },
   {
     path: '/conclusiones',
